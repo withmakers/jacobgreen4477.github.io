@@ -1,15 +1,43 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>vue-element-admin</title>
-  </head>
-  <body>
-    <script src=<%= BASE_URL %>/tinymce4.7.5/tinymce.min.js></script>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
-</html>
+---
+layout: default
+title: Homepage
+---
+
+<div id="home">
+  <ul class="posts">
+    {% for post in paginator.posts %}
+    <li itemscope itemtype="http://schema.org/BlogPosting">
+      <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">
+        <div class="p-wrap">
+          <article class="inner">
+            <time datetime="{{ post.date | date_to_xmlschema }}"
+                itemprop="datePublished">
+              {{ post.date | date_to_string }}
+            </time>
+            <p itemprop="name headline">{{ post.title }}</p>
+          </article>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.next_page %}
+  <a href="{{ site.baseurl }}/page/{{paginator.next_page}}" class="older">Older</a>
+  {% else %}
+  <span class="next">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+    <a href="{{ site.baseurl }}/" class="newer">Newer</a>
+    {% else %}
+    <a href="{{ site.baseurl }}/page/{{paginator.previous_page}}" class="newer">Newer</a>
+    {% endif %}
+  {% else %}
+  <span class="previous">Newer</span>
+  {% endif %}
+</div>
+{% endif %}
