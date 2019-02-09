@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>제이콥의 &lt;br&gt; 머신러닝, 딥러닝, 인공지능 저장소</title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 07 Jan 2019 14:20:35 +0900</pubDate>
+    <lastBuildDate>Mon, 07 Jan 2019 14:20:35 +0900</lastBuildDate>
+    <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>DB손해보험으로 이직</title>
+        <description>&lt;p&gt;(냉무)&lt;/p&gt;
+</description>
+        <pubDate>Mon, 07 Jan 2019 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/etc/2019/01/07/DB.html</link>
+        <guid isPermaLink="true">http://localhost:4000/etc/2019/01/07/DB.html</guid>
+        
+        <category>etc</category>
+        
+        
+        <category>etc</category>
+        
+      </item>
+    
+      <item>
+        <title>2018.12.29. 데이터 사이언스 뉴스레터</title>
+        <description>&lt;p&gt;데이터 사이언스 뉴스레터 (&lt;a href=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/output/report/wordcloud_20181229.png&quot;&gt;wordcloud&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;kaggle-blog-news-title&quot;&gt;Kaggle Blog NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;no new article&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-camp-news-title&quot;&gt;Data Camp NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;no new article&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;analytics-vidhya-news-title&quot;&gt;Analytics Vidhya NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/12/best-data-science-machine-learning-projects-github/&quot;&gt;The 25 Best Data Science Projects on GitHub from 2018 that you Should Not Miss&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): model(10), project(10), researcher(7), task(7), resource(6), image(5), release(5), tool(5), example(4), framework(4)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;machine-learning-mastery-news-title&quot;&gt;Machine Learning Mastery NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/weighted-average-ensemble-for-deep-learning-neural-networks/&quot;&gt;How to Develop a Weighted Average Ensemble for Deep Learning Neural Networks&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): weight(31), model(28), value(12), result(9), ensemble(8), point(7), example(5), dot(4), function(4), prediction(4)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/horizontal-voting-ensemble/&quot;&gt;How to Reduce Variance in the Final Deep Learning Model With a Horizontal Voting Ensemble&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): model(41), epoch(14), point(8), prediction(7), dataset(5), score(5), example(4), result(4), curve(3), dot(3)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-create-a-random-split-cross-validation-and-bagging-ensemble-for-deep-learning-in-keras/&quot;&gt;How to Create a Random-Split, Cross-Validation, and Bagging Ensemble for Deep Learning in Keras&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): model(45), ensemble(10), example(10), prediction(10), split(10), dot(8), score(8), set(8), method(7), point(6)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 29 Dec 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/newsletters/2018/12/29/newsletter.html</link>
+        <guid isPermaLink="true">http://localhost:4000/newsletters/2018/12/29/newsletter.html</guid>
+        
+        <category>Machine learning</category>
+        
+        <category>Data Science article</category>
+        
+        
+        <category>newsletters</category>
+        
+      </item>
+    
+      <item>
+        <title>2018.12.22. 데이터 사이언스 뉴스레터</title>
+        <description>&lt;p&gt;데이터 사이언스 뉴스레터 (&lt;a href=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/output/report/wordcloud_20181222.png&quot;&gt;wordcloud&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;kaggle-blog-news-title&quot;&gt;Kaggle Blog NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.kaggle.com/2018/12/19/hackathon-winner-interview-penn-state-kaggle-university-club/&quot;&gt;Hackathon Winner Interview: Penn State | Kaggle University Club&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): competition(4), aspiration(3), team(3), approach(2), art(2), idea(2), kernel(2), oake(2), algorithm(1), book(1)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-camp-news-title&quot;&gt;Data Camp NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.datacamp.com/community/blog/datacamp-announces-new-funding&quot;&gt;DataCamp Announces New Funding&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): analytics(3), company(3), datacamp(2), project(2), capability(1), exercise(1), expert(1), hint(1), integration(1), learner(1)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;analytics-vidhya-news-title&quot;&gt;Analytics Vidhya NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/12/datahack-radio-quantum-machine-learning/&quot;&gt;DataHack Radio #14: Quantum Computing and Quantum Machine Learning with Dr. Mandaar Pande&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): computer(3), atom(2), folk(2), mechanic(2), optic(2), physic(2), transistor(2), application(1), aspect(1), avenue(1)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/12/key-breakthroughs-ai-ml-2018-trends-2019/&quot;&gt;A Technical Overview of AI &amp;amp; ML (NLP, Computer Vision, Reinforcement Learning) in 2018 &amp;amp; Trends for 2019&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): model(9), task(7), application(6), time(6), company(5), development(5), image(5), thought(4), analytics(3), embedding(3)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/12/top-highlights-tutorials-neurips-2018/&quot;&gt;Top Highlights from the Amazing Machine Learning Tutorials Presented at NeurIPS (NIPS) 2018&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): method(9), neurip(9), speaker(9), system(9), researcher(7), session(7), topic(7), feature(5), model(5), term(5)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/12/guide-digital-marketing-analytics/&quot;&gt;A Comprehensive Guide to Digital Marketing and Analytics Every Data Science Professional Must Read&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): analytics(24), media(21), tag(16), cooky(9), customer(9), advertiser(8), visitor(7), impression(6), tool(6), adword(5)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;machine-learning-mastery-news-title&quot;&gt;Machine Learning Mastery NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/model-averaging-ensemble-for-deep-learning-neural-networks/&quot;&gt;How to Reduce the Variance of Deep Learning Models in Keras Using Model Averaging Ensembles&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): model(29), prediction(12), score(8), kera(6), point(6), sample(6), result(5), ensemble(4), variable(4), curve(3)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/ensemble-methods-for-deep-learning-neural-networks/&quot;&gt;Ensemble Methods for Deep Learning Neural Networks to Reduce Variance and Improve Performance&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): model(37), network(32), prediction(29), method(9), weight(9), ensemble(7), result(7), error(5), layer(5), input(4)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/introduction-to-regularization-to-reduce-overfitting-and-improve-generalization-error/&quot;&gt;Introduction to Regularization to Reduce Overfitting of Deep Learning Neural Networks&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): network(12), method(9), weight(8), example(7), parameter(6), input(5), case(4), change(4), layer(4), node(4)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 22 Dec 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/newsletters/2018/12/22/newsletter.html</link>
+        <guid isPermaLink="true">http://localhost:4000/newsletters/2018/12/22/newsletter.html</guid>
+        
+        <category>Machine learning</category>
+        
+        <category>Data Science article</category>
+        
+        
+        <category>newsletters</category>
+        
+      </item>
+    
+      <item>
+        <title>2018.12.15. 데이터 사이언스 뉴스레터</title>
+        <description>&lt;p&gt;데이터 사이언스 뉴스레터 (&lt;a href=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/output/report/wordcloud_20181215.png&quot;&gt;wordcloud&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;kaggle-blog-news-title&quot;&gt;Kaggle Blog NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;no new article&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-camp-news-title&quot;&gt;Data Camp NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.datacamp.com/community/blog/dataframed-challenge&quot;&gt;Enter the #DataFramedChallenge for a chance to be on an upcoming podcast segment.&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): tweet(2), chance(1), duplicate(1), episode(1), itune(1), NA(NA), NA(NA), NA(NA), NA(NA), NA(NA)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;analytics-vidhya-news-title&quot;&gt;Analytics Vidhya NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/12/wns-hackathon-solutions-by-top-finishers/&quot;&gt;WNS Hackathon Solutions by Top Finishers&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): solution(5), analytics(4), hackathon(3), model(3), participant(3), employee(2), registration(2), row(2), submission(2), winner(2)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/12/introduction-face-detection-video-deep-learning-python/&quot;&gt;Building a Face Detection Model from Video using Deep Learning (Python Implementation)&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): application(8), case(4), technique(3), tool(3), attendee(2), comment(2), detail(2), face(2), image(2), suggestion(2)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;machine-learning-mastery-news-title&quot;&gt;Machine Learning Mastery NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-improve-deep-learning-model-robustness-by-adding-noise/&quot;&gt;How to Improve Deep Learning Model Robustness by Adding Noise&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): value(7), circle(5), dataset(5), kera(5), layer(5), model(5), sample(5), epoch(4), observation(4), point(4)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/train-neural-networks-with-noise-to-reduce-overfitting/&quot;&gt;Train Neural Networks With Noise to Reduce Overfitting&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): network(16), variable(10), input(9), weight(9), example(5), type(5), model(4), point(4), sample(4), activation(3)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-stop-training-deep-neural-networks-at-the-right-time-using-early-stopping/&quot;&gt;How to Stop Training Deep Neural Networks At the Right Time Using Early Stopping&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): callback(10), epoch(8), model(7), network(4), observation(4), problem(4), result(4), sample(4), set(4), dataset(3)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 15 Dec 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/newsletters/2018/12/15/newsletter.html</link>
+        <guid isPermaLink="true">http://localhost:4000/newsletters/2018/12/15/newsletter.html</guid>
+        
+        <category>Machine learning</category>
+        
+        <category>Data Science article</category>
+        
+        
+        <category>newsletters</category>
+        
+      </item>
+    
+      <item>
+        <title>2018.12.08. 데이터 사이언스 뉴스레터</title>
+        <description>&lt;p&gt;데이터 사이언스 뉴스레터 (&lt;a href=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/output/report/wordcloud_20181208.png&quot;&gt;wordcloud&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;kaggle-blog-news-title&quot;&gt;Kaggle Blog NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.kaggle.com/2018/12/05/announcing-kaggle-integration-with-google-data-studio/&quot;&gt;Announcing Kaggle integration with Google Data Studio&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): user(8), dataset(5), dashboard(4), story(3), finding(2), kernel(2), analytics(1), blog(1), decision(1), developer(1)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-camp-news-title&quot;&gt;Data Camp NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;no new article&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;analytics-vidhya-news-title&quot;&gt;Analytics Vidhya NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/12/practical-guide-object-detection-yolo-framewor-python/&quot;&gt;A Practical Guide to Object Detection using the Popular YOLO Framework &amp;lt;U+2013&amp;gt; Part III (with Python codes)&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): box(38), object(19), algorithm(7), coordinate(5), grid(5), iou(5), prediction(5), probability(5), value(5), image(4)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/12/best-machine-learning-github-repositories-reddit-threads-november-2018/&quot;&gt;5 Best Machine Learning GitHub Repositories &amp;amp; Reddit Discussions (November 2018)&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): comment(4), developer(2), folk(2), neuron(2), repository(2), representation(2), researcher(2), resource(2), algorithm(1), ambition(1)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/12/building-a-random-forest-from-scratch-understanding-real-world-data-products-ml-for-programmers-part-3/&quot;&gt;Building a Random Forest from Scratch &amp;amp; Understanding Real-World Data Products (ML for Programmers &amp;lt;U+2013&amp;gt; Part 3)&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): point(10), technique(10), feature(9), result(9), prediction(8), step(6), value(6), application(5), model(5), tree(5)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/12/practical-guide-object-detection-yolo-framewor-python/&quot;&gt;A Practical Guide to Object Detection using the Popular YOLO Framework &amp;lt;U+2013&amp;gt; Part III (with Python codes) &lt;/a&gt;
+&lt;br /&gt;Keyword(freq): box(38), object(19), algorithm(7), coordinate(5), grid(5), iou(5), prediction(5), probability(5), value(5), image(4)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;machine-learning-mastery-news-title&quot;&gt;Machine Learning Mastery NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/early-stopping-to-avoid-overtraining-neural-network-models/&quot;&gt;A Gentle Introduction to Early Stopping to Avoid Overtraining Deep Learning Neural Network Models&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): network(12), epoch(9), model(7), time(4), trigger(4), value(4), dataset(3), parameter(3), result(3), set(3)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-reduce-overfitting-with-dropout-regularization-in-keras/&quot;&gt;How to Reduce Overfitting With Dropout Regularization in Keras&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): input(12), layer(11), circle(5), output(5), sample(5), dataset(4), kera(4), model(4), network(4), observation(4)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/dropout-for-regularizing-deep-neural-networks/&quot;&gt;A Gentle Introduction to Dropout for Regularizing Deep Neural Networks&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): network(29), layer(18), unit(11), node(10), weight(9), model(7), output(5), result(5), problem(4), rate(4)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 08 Dec 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/newsletters/2018/12/08/newsletter.html</link>
+        <guid isPermaLink="true">http://localhost:4000/newsletters/2018/12/08/newsletter.html</guid>
+        
+        <category>Machine learning</category>
+        
+        <category>Data Science article</category>
+        
+        
+        <category>newsletters</category>
+        
+      </item>
+    
+      <item>
+        <title>2018.12.01. 데이터 사이언스 뉴스레터</title>
+        <description>&lt;p&gt;데이터 사이언스 뉴스레터 (&lt;a href=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/output/report/wordcloud_20181201.png&quot;&gt;wordcloud&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;kaggle-blog-news-title&quot;&gt;Kaggle Blog NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.kaggle.com/2018/11/29/designing-a-self-learning-tic-tac-toe-player/&quot;&gt;Designing a Self-Learning Tic-Tac-Toe Player&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): community(1), dataset(1), embedding(1), kernel(1), network(1), result(1), right(1), war(1), NA(NA), NA(NA)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.kaggle.com/2018/11/27/kaggle-days/&quot;&gt;LogicAI and Kaggle team up on Kaggle Days events in 2019 and beyond!&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): event(5), grandmaster(2), logicai(2), master(2), participant(2), application(1), effort(1), enthusiast(1), fan(1), hometown(1)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-camp-news-title&quot;&gt;Data Camp NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.datacamp.com/community/blog/topical-projects&quot;&gt;Request for Proposal: Topical Projects for January 2019&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): project(6), faq(2), instructor(2), achievement(1), advantage(1), analysis(1), benefit(1), hour(1), idea(1), outsource(1)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.datacamp.com/community/blog/weapons-math-destruction&quot;&gt;Cathy O’Neil discusses the current lack of fairness in artificial intelligence and much more.&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): algorithm(36), company(10), krono(9), question(9), scientist(8), death(7), teacher(6), decision(5), loop(5), problem(5)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;analytics-vidhya-news-title&quot;&gt;Analytics Vidhya NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/11/tutorial-text-classification-ulmfit-fastai-library/&quot;&gt;Tutorial on Text Classification (NLP) using ULMFiT and fastai Library in Python&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): model(13), dataset(6), task(5), result(4), technique(4), kwarg(3), label(3), thank(3), application(2), document(2)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/11/highlights-from-datahack-summit-2018-a-truly-overwhelming-and-resounding-success/&quot;&gt;Highlights from DataHack Summit 2018 &amp;lt;U+2013&amp;gt; a Truly Overwhelming and Resounding Success!&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): attendee(3), leader(3), topic(3), workshop(3), folk(2), professional(2), session(2), analytics(1), auditorium(1), career(1)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;machine-learning-mastery-news-title&quot;&gt;Machine Learning Mastery NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-reduce-generalization-error-in-deep-neural-networks-with-activity-regularization-in-keras/&quot;&gt;How to Reduce Generalization Error in Deep Neural Networks With Activity Regularization in Keras&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): dataset(6), model(6), observation(6), set(6), circle(5), kera(5), plot(4), sample(4), network(3), output(3)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/activation-regularization-for-reducing-generalization-error-in-deep-learning-neural-networks/&quot;&gt;Activation Regularization for Reducing Generalization Error in Deep Learning Neural Networks&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): feature(23), value(12), model(10), activation(9), representation(9), network(8), autoencoder(5), example(5), type(5), weight(4)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-reduce-overfitting-in-deep-neural-networks-with-weight-constraints-in-keras/&quot;&gt;How to Reduce Overfitting in Deep Neural Networks Using Weight Constraints in Keras&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): constraint(15), weight(12), set(6), dataset(4), kera(4), norm(4), observation(4), sample(4), layer(3), model(3)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 01 Dec 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/newsletters/2018/12/01/newsletter.html</link>
+        <guid isPermaLink="true">http://localhost:4000/newsletters/2018/12/01/newsletter.html</guid>
+        
+        <category>Machine learning</category>
+        
+        <category>Data Science article</category>
+        
+        
+        <category>newsletters</category>
+        
+      </item>
+    
+      <item>
+        <title>2018.11.24. 데이터 사이언스 뉴스레터</title>
+        <description>&lt;p&gt;데이터 사이언스 뉴스레터 (&lt;a href=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/output/report/wordcloud_20181124.png&quot;&gt;wordcloud&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;kaggle-blog-news-title&quot;&gt;Kaggle Blog NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;no new article&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-camp-news-title&quot;&gt;Data Camp NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.datacamp.com/community/blog/data-science-tool-building&quot;&gt;Wes McKinney discusses data science tool building.&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): pandas(60), project(22), developer(20), tool(15), lab(10), language(10), library(8), problem(8), set(7), statistics(7)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;analytics-vidhya-news-title&quot;&gt;Analytics Vidhya NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/11/4-secrets-for-a-future-ready-career-in-data-science/&quot;&gt;4 Secrets for a Future Ready Career in Data Science&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): job(9), domain(5), scientist(5), process(3), role(3), skill(3), tool(3), business(2), change(2), document(2)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/11/reinforcement-learning-introduction-monte-carlo-learning-openai-gym/&quot;&gt;Reinforcement Learning: Introduction to Monte Carlo Learning using the OpenAI Gym Toolkit&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): episode(8), return(5), state(5), action(4), probability(4), reward(4), method(3), algorithm(2), article(2), bandit(2)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;machine-learning-mastery-news-title&quot;&gt;Machine Learning Mastery NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/introduction-to-weight-constraints-to-reduce-generalization-error-in-deep-learning/&quot;&gt;A Gentle Introduction to Weight Constraints to Reduce Generalization Error in Deep Learning&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): weight(37), constraint(13), network(12), model(5), method(4), variable(4), detector(3), idea(3), layer(3), penalty(3)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-reduce-overfitting-in-deep-learning-with-weight-regularization/&quot;&gt;How to Reduce Overfitting of a Deep Learning Model with Weight Regularization&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): model(8), result(8), value(8), dataset(6), network(6), set(6), epoch(4), example(4), kera(4), moon(4)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/weight-regularization-to-reduce-overfitting-of-deep-learning-models/&quot;&gt;Use Weight Regularization to Reduce Overfitting of Deep Learning Models&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): weight(45), network(12), value(10), model(7), variable(7), input(5), change(4), penalty(4), approach(3), coefficient(3)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 24 Nov 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/newsletters/2018/11/24/newsletter.html</link>
+        <guid isPermaLink="true">http://localhost:4000/newsletters/2018/11/24/newsletter.html</guid>
+        
+        <category>Machine learning</category>
+        
+        <category>Data Science article</category>
+        
+        
+        <category>newsletters</category>
+        
+      </item>
+    
+      <item>
+        <title>2018.11.17. 데이터 사이언스 뉴스레터</title>
+        <description>&lt;p&gt;데이터 사이언스 뉴스레터 (&lt;a href=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/output/report/wordcloud_20181117.png&quot;&gt;wordcloud&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;kaggle-blog-news-title&quot;&gt;Kaggle Blog NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.kaggle.com/2018/11/15/data-notes-impact-of-game-of-thrones-on-us-baby-names/&quot;&gt;Data Notes: Impact of Game of Thrones on US Baby Names&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): throne(2), baby(1), dataset(1), fan(1), history(1), kaggler(1), kernel(1), mapplot(1), right(1), NA(NA)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-camp-news-title&quot;&gt;Data Camp NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.datacamp.com/community/blog/managing-data-science-teams&quot;&gt;Angela Bassa discusses managing data science teams and much more.&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): folk(29), question(20), term(13), company(8), heuristic(7), scientist(7), robot(6), team(6), answer(5), expert(5)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;analytics-vidhya-news-title&quot;&gt;Analytics Vidhya NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/11/datahack-summit-2018-build-india-nextgen-data-science-ecosystem/&quot;&gt;DataHack Summit 2018 is Almost Here &amp;lt;U+2013&amp;gt; WHERE HUMANS MEET ARTIFICIAL INTELLIGENCE&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): session(7), workshop(6), leader(4), practitioner(4), talk(4), domain(3), startup(3), topic(3), analytics(2), concept(2)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;machine-learning-mastery-news-title&quot;&gt;Machine Learning Mastery NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/&quot;&gt;How to Grid Search Deep Learning Models for Time Series Forecasting&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): model(20), hyperparameter(19), configuration(16), observation(16), value(11), score(7), prediction(6), sample(5), element(4), layer(4)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-develop-lstm-models-for-time-series-forecasting/&quot;&gt;How to Develop LSTM Models for Time Series Forecasting&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): step(55), sample(29), model(22), problem(13), feature(11), lstm(8), component(7), type(7), value(7), variable(7)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-develop-convolutional-neural-network-models-for-time-series-forecasting/&quot;&gt;How to Develop Convolutional Neural Network Models for Time Series Forecasting&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): step(49), sample(26), model(11), component(8), array(7), feature(7), problem(7), value(7), variable(7), cnn(6)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 17 Nov 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/newsletters/2018/11/17/newsletter.html</link>
+        <guid isPermaLink="true">http://localhost:4000/newsletters/2018/11/17/newsletter.html</guid>
+        
+        <category>Machine learning</category>
+        
+        <category>Data Science article</category>
+        
+        
+        <category>newsletters</category>
+        
+      </item>
+    
+      <item>
+        <title>2018.11.10. 데이터 사이언스 뉴스레터</title>
+        <description>&lt;p&gt;데이터 사이언스 뉴스레터 (&lt;a href=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/output/report/wordcloud_20181110.png&quot;&gt;wordcloud&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;kaggle-blog-news-title&quot;&gt;Kaggle Blog NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.kaggle.com/2018/11/06/new-maintained-datasets/&quot;&gt;New: Maintained Datasets&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): dataset(5), api(1), call(1), comment(1), description(1), example(1), kaggler(1), metadata(1), organization(1), question(1)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-camp-news-title&quot;&gt;Data Camp NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.datacamp.com/community/blog/human-centered-design-data-science&quot;&gt;Peter Bull discusses the importance of human-centered design in data science. &lt;/a&gt;
+&lt;br /&gt;Keyword(freq): agent(12), ethic(12), project(12), transaction(11), service(10), scientist(9), video(9), competition(7), tool(7), method(6)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;analytics-vidhya-news-title&quot;&gt;Analytics Vidhya NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/11/data-engineer-comprehensive-list-resources-get-started/&quot;&gt;Want to Become a Data Engineer? Here’s a Comprehensive List of Resources to get Started&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): book(11), engineer(10), resource(10), application(8), basic(8), scientist(7), example(6), system(6), topic(6), component(5)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/11/implementation-faster-r-cnn-python-object-detection/&quot;&gt;A Practical Implementation of the Faster R-CNN Algorithm for Object Detection (Part 2 &amp;lt;U+2013&amp;gt; with Python codes)&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): image(10), algorithm(7), object(6), prediction(6), region(6), weight(6), box(5), library(5), cell(4), step(4)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;machine-learning-mastery-news-title&quot;&gt;Machine Learning Mastery NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-develop-multilayer-perceptron-models-for-time-series-forecasting/&quot;&gt;How to Develop Multilayer Perceptron Models for Time Series Forecasting&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): step(47), sample(27), feature(8), array(7), observation(7), problem(7), variable(7), component(6), model(6), value(6)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-use-the-timeseriesgenerator-for-time-series-forecasting-in-keras/&quot;&gt;How to Use the TimeseriesGenerator for Time Series Forecasting in Keras&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): sample(27), observation(14), step(12), model(8), feature(6), file(6), output(6), input(5), thank(5), value(5)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/lstm-autoencoders/&quot;&gt;A Gentle Introduction to LSTM Autoencoders&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): sequence(13), lstm(12), representation(9), feature(7), model(7), step(7), problem(6), thank(6), frame(5), kera(5)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 10 Nov 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/newsletters/2018/11/10/newsletter.html</link>
+        <guid isPermaLink="true">http://localhost:4000/newsletters/2018/11/10/newsletter.html</guid>
+        
+        <category>Machine learning</category>
+        
+        <category>Data Science article</category>
+        
+        
+        <category>newsletters</category>
+        
+      </item>
+    
+      <item>
+        <title>2018.11.03. 데이터 사이언스 뉴스레터</title>
+        <description>&lt;p&gt;데이터 사이언스 뉴스레터 (&lt;a href=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/output/report/wordcloud_20181103.png&quot;&gt;wordcloud&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;kaggle-blog-news-title&quot;&gt;Kaggle Blog NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.kaggle.com/2018/11/02/pulse-of-the-competition-november-edition/&quot;&gt;Pulse of the Competition: November Edition&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): kernel(4), competition(2), kaggler(2), technique(2), tip(2), winner(2), astrophysic(1), atlas(1), backbone(1), cell(1)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.kaggle.com/2018/11/01/data-notes-chinese-tourisms-impact-on-taiwan/&quot;&gt;Data Notes: Chinese Tourism’s Impact on Taiwan&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): forecast(2), dataset(1), election(1), flower(1), kernel(1), mathematic(1), model(1), provider(1), right(1), subspecy(1)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-camp-news-title&quot;&gt;Data Camp NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.datacamp.com/community/blog/ai-healthcare&quot;&gt;Arnaub Chatterjee discusses artificial intelligence (AI) and machine learning (ML) in healthcare.&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): company(33), patient(16), term(15), case(14), algorithm(13), model(9), startup(9), task(9), application(8), method(8)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;analytics-vidhya-news-title&quot;&gt;Analytics Vidhya NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/11/best-machine-learning-github-repositories-reddit-threads-october-2018/&quot;&gt;Top 5 Machine Learning GitHub Repositories &amp;amp; Reddit Discussions (October 2018)&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): idea(4), model(4), project(4), skill(4), professional(3), scientist(3), thought(3), algorithm(2), detail(2), discussion(2)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/11/introduction-text-summarization-textrank-python/&quot;&gt;An Introduction to Text Summarization using the TextRank Algorithm (with Python implementation)&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): sentence(22), article(9), vector(9), page(7), embedding(4), feature(3), score(3), similarity(3), stopword(3), thank(3)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/10/datahack-radio-podcast-oil-gas-ai/&quot;&gt;DataHack Radio #13: Data Science and AI in the Oil &amp;amp; Gas Industry with Yogendra Pandey, Ph.D.&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): application(3), case(2), network(2), organization(2), rig(2), technique(2), advancement(1), algorithm(1), analytics(1), episode(1)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/10/interpret-random-forest-model-machine-learning-programmers/&quot;&gt;An Intuitive Guide to Interpret a Random Forest Model using fastai library (Machine Learning for Programmers &amp;lt;U+2013&amp;gt; Part 2)&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): feature(26), variable(23), prediction(20), value(17), result(12), category(7), column(7), model(7), row(5), tree(5)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/10/madras-multi-agent-driving-simulator/&quot;&gt;MADRaS: A Multi-Agent DRiving Simulator for Autonomous Driving Research&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): agent(8), car(4), algorithm(3), behavior(3), driver(3), madra(2), oftorc(2), robot(2), scenario(2), simulator(2)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2018/10/computer-vision-approach-hand-gesture-recognition/&quot;&gt;A Computer Vision Approach to Hand Gesture Recognition&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): gesture(8), value(7), angle(4), feature(4), sensor(4), acceleration(3), axe(2), cluster(2), soldier(2), algorithm(1)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;machine-learning-mastery-news-title&quot;&gt;Machine Learning Mastery NEWS TITLE&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/lstm-model-architecture-for-rare-event-time-series-forecasting/&quot;&gt;LSTM Model Architecture for Rare Event Time Series Forecasting&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): series(23), network(21), model(8), lstm(7), holiday(6), vector(6), event(5), forecast(4), outlier(4), result(4)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/findings-comparing-classical-and-machine-learning-methods-for-time-series-forecasting/&quot;&gt;Results From Comparing Classical and Machine Learning Methods for Time Series Forecasting&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): method(73), concern(15), result(15), model(14), dataset(9), problem(8), observation(7), finding(6), algorithm(4), forecast(4)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/how-to-develop-deep-learning-models-for-univariate-time-series-forecasting/&quot;&gt;How to Develop Deep Learning Models for Univariate Time Series Forecasting&lt;/a&gt;
+&lt;br /&gt;Keyword(freq): observation(33), model(21), sale(21), step(12), feature(11), value(11), hyperparameter(9), network(9), score(9), prediction(8)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 03 Nov 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/newsletters/2018/11/03/newsletter.html</link>
+        <guid isPermaLink="true">http://localhost:4000/newsletters/2018/11/03/newsletter.html</guid>
+        
+        <category>Machine learning</category>
+        
+        <category>Data Science article</category>
+        
+        
+        <category>newsletters</category>
+        
+      </item>
+    
+  </channel>
+</rss>

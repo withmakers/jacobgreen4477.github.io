@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-55499LK');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <title>2018.09.01. 데이터 사이언스 뉴스레터</title>
+    <meta name="description"
+          content="데이터 사이언스 뉴스레터 (wordcloud)">
+
+    <link rel="canonical" href="http://localhost:4000/newsletters/2018/09/01/newsletter.html">
+    <link rel="alternate" type="application/rss+xml" title="제이콥의 <br> 머신러닝, 딥러닝, 인공지능 저장소" href="http://localhost:4000/feed.xml">
+
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Third-Party CSS -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="/bower_components/hover/css/hover-min.css">
+    <link rel="stylesheet" href="/bower_components/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/assets/css/common.css">
+
+    <!-- CSS set in page -->
+    
+
+    <!-- CSS set in layout -->
+    
+    <link rel="stylesheet" href="/assets/css/sidebar-post-nav.css">
+    
+
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+
+    <body>
+    
+    <!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55499LK"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+    <style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+
+<header class="site-header" style="background-color:white; margin-top:0">
+<!--<header class="site-header" style=background-color:white;>-->    
+    
+    <div class="container">
+        <span id="site-header-brand">
+            <!--<a href="https://jacobgreen4477.github.io/"><img src="https://raw.githubusercontent.com/jacobgreen4477/jacobgreen4477.github.io/master/_img/deepbro.png" style="max-width:25%;max-height:25%;"></img></a>-->
+        </span>
+        <nav class="site-header-nav" role="navigation">
+            
+
+              
+              <a href="/"
+                 class=" site-header-nav-item hvr-underline-from-center"
+                 target=""
+                 title="Home"
+                 style="color:black">
+                  Home
+              </a>
+               
+
+
+              
+
+
+              
+
+
+            
+
+               
+
+
+              
+                <div class="dropdown">
+                  <a class="site-header-nav-item hvr-underline-from-center" style="color:black">Project</a>
+                  <div class="dropdown-content">
+                     
+                      <a href="/open-source">Open Source</a>
+                     
+                      <a href="/newsletter">News Letter</a>
+                     
+                      <a href="/blog">Research Title</a>
+                     
+                      <a href="/master-code">Machine Learning Master Code</a>
+                    
+                  </div>
+                </div>
+              
+
+
+              
+
+
+            
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <!-- 글쓰는데 사용되는 HTML -->
+<section class="jumbotron geopattern" data-pattern-id="2018.09.01. 데이터 사이언스 뉴스레터">
+    <div class="container">
+        <div id="jumbotron-meta-info">
+            <h1>2018.09.01. 데이터 사이언스 뉴스레터</h1>
+            <span class="meta-info">
+                
+                
+                <span class="octicon octicon-calendar"></span> 2018/09/01
+                
+            </span>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function(){
+
+        $('.geopattern').each(function(){
+            $(this).geopattern($(this).data('pattern-id'));
+        });
+
+    });
+</script>
+<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
+	<script type="text/javascript" async
+		src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+    <div class="row">
+
+        
+        <div class="col-md-8 markdown-body">
+
+            <p>데이터 사이언스 뉴스레터 (<a href="https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/output/report/wordcloud_20180901.png">wordcloud</a>)</p>
+
+<p><br /></p>
+
+<h4 id="kaggle-blog-news-title">Kaggle Blog NEWS TITLE</h4>
+
+<ul>
+  <li>no new article</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="data-camp-news-title">Data Camp NEWS TITLE</h4>
+
+<ul>
+  <li>no new article</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="analytics-vidhya-news-title">Analytics Vidhya NEWS TITLE</h4>
+
+<ul>
+  <li>
+    <p><a href="https://www.analyticsvidhya.com/blog/2018/08/auto-arima-time-series-modeling-python-r/">Build High Performance Time Series Models using Auto ARIMA in Python and R</a>
+<br />Keyword(freq): value(10), technique(7), parameter(4), link(3), model(3), point(3), step(3), code(2), component(2), holt(2)</p>
+  </li>
+  <li>
+    <p><a href="https://www.analyticsvidhya.com/blog/2018/08/a-simple-introduction-to-facial-recognition-with-python-codes/">A Simple Introduction to Facial Recognition (with Python codes)</a>
+<br />Keyword(freq): face(8), image(8), feature(5), algorithm(4), celebrity(4), dimension(3), http(3), number(3), vector(3), application(2)</p>
+  </li>
+  <li>
+    <p><a href="https://www.analyticsvidhya.com/blog/2018/08/dimensionality-reduction-techniques-python/">The Ultimate Guide to 12 Dimensionality Reduction Techniques (with Python codes)</a>
+<br />Keyword(freq): variable(55), component(23), value(22), feature(15), technique(13), image(10), point(10), dimension(8), factor(8), result(7)</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="machine-learning-mastery-news-title">Machine Learning Mastery NEWS TITLE</h4>
+
+<ul>
+  <li>
+    <p><a href="https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/">How and When to Use ROC Curves and Precision-Recall Curves for Classification in Python</a>
+<br />Keyword(freq): curve(17), positive(15), negative(11), probability(11), value(10), threshold(6), measure(5), model(5), problem(5), score(5)</p>
+  </li>
+  <li>
+    <p><a href="https://machinelearningmastery.com/how-to-predict-room-occupancy-based-on-environmental-factors/">How to Predict Room Occupancy Based on Environmental Factors</a>
+<br />Keyword(freq): file(6), measure(6), room(5), variable(5), model(4), observation(4), result(4), question(3), set(3), uci(3)</p>
+  </li>
+  <li>
+    <p><a href="https://machinelearningmastery.com/how-to-predict-whether-eyes-are-open-or-closed-using-brain-waves/">How to Predict Whether a Persons Eyes are Open or Closed Using Brain Waves</a>
+<br />Keyword(freq): observation(19), model(12), row(8), outlier(7), result(5), thank(5), deviation(4), method(4), peak(4), problem(3)</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+
+
+            <!-- Comments -->
+            <!-- 
+ -->
+            <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://jacobgreen1984.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+        </div>
+
+        <!--
+        <div class="col-md-4">
+            <h3>Post Directory</h3>
+<div id="post-directory-module">
+<section class="post-directory">
+    <!-- Links that trigger the jumping -->
+    <!-- Added by javascript below -->
+    <dl></dl>
+</section>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $( "article h2" ).each(function( index ) {
+            $(".post-directory dl").append("<dt><a class=\"jumper\" hre=#" +
+                    $(this).attr("id")
+                    + ">"
+                    + $(this).text()
+                    + "</a></dt>");
+
+            var children = $(this).nextUntil("h2", "h3")
+
+            children.each(function( index ) {
+                $(".post-directory dl").append("<dd><a class=\"jumper\" hre=#" +
+                        $(this).attr("id")
+                        + ">"
+                        + "&nbsp;&nbsp;- " + $(this).text()
+                        + "</a></dd>");
+            });
+        });
+
+        var fixmeTop = $('#post-directory-module').offset().top - 100;       // get initial position of the element
+
+        $(window).scroll(function() {                  // assign scroll event listener
+
+            var currentScroll = $(window).scrollTop(); // get current position
+
+            if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+                $('#post-directory-module').css({      // scroll to that element or below it
+                    top: '100px',
+                    position: 'fixed',
+                    width: 'inherit'
+                });
+            } else {                                   // apply position: static
+                $('#post-directory-module').css({      // if you scroll above it
+                    position: 'inherit',
+                    width: 'inherit'
+                });
+            }
+
+        });
+
+        $("a.jumper").on("click", function( e ) {
+
+            e.preventDefault();
+
+            $("body, html").animate({
+                scrollTop: ($( $(this).attr('hre') ).offset().top - 100)
+            }, 600);
+
+        });
+    });
+
+</script>
+        </div>
+        
+        -->
+
+    </div>
+
+</article>
+
+        </div>
+
+    <footer class="container">
+
+    <div class="site-footer">
+
+        <div class="pull-right">
+            <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+        </div>
+
+    </div>
+
+    <!-- Third-Party JS -->
+    <script type="text/javascript" src="/bower_components/geopattern/js/geopattern.min.js"></script>
+
+    <!-- My JS -->
+    <script type="text/javascript" src="/assets/js/script.js"></script>
+
+    
+
+    
+
+</footer>
+
+
+    </body>
+
+</html>

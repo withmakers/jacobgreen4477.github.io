@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 3.8'
-
-group :jekyll_plugins do
-  gem 'jekyll-paginate', '~> 1.1'
-end
+gem 'json', github: 'flori/json', branch: 'v1.8'
+gem 'rough'
+gem 'jekyll-paginate'
+gem 'jekyll-geo-pattern'
+gem 'kramdown'
+gem 'jekyll-github-metadata'
+gem 'jekyll-theme-modernist'

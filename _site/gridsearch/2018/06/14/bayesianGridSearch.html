@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-55499LK');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <title>Bayesian Optimization using R and H2O</title>
+    <meta name="description"
+          content="rBayesianOptimization을 사용한 h2o.gbm 튜닝 코드입니다. 모델 튜닝은 최적의 하이퍼 파라미터를 찾는 행위이고 이를 grid search라고 합니다.">
+
+    <link rel="canonical" href="http://localhost:4000/gridsearch/2018/06/14/bayesianGridSearch.html">
+    <link rel="alternate" type="application/rss+xml" title="제이콥의 <br> 머신러닝, 딥러닝, 인공지능 저장소" href="http://localhost:4000/feed.xml">
+
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Third-Party CSS -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="/bower_components/hover/css/hover-min.css">
+    <link rel="stylesheet" href="/bower_components/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/assets/css/common.css">
+
+    <!-- CSS set in page -->
+    
+
+    <!-- CSS set in layout -->
+    
+    <link rel="stylesheet" href="/assets/css/sidebar-post-nav.css">
+    
+
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+
+    <body>
+    
+    <!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55499LK"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+    <style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+
+<header class="site-header" style="background-color:white; margin-top:0">
+<!--<header class="site-header" style=background-color:white;>-->    
+    
+    <div class="container">
+        <span id="site-header-brand">
+            <!--<a href="https://jacobgreen4477.github.io/"><img src="https://raw.githubusercontent.com/jacobgreen4477/jacobgreen4477.github.io/master/_img/deepbro.png" style="max-width:25%;max-height:25%;"></img></a>-->
+        </span>
+        <nav class="site-header-nav" role="navigation">
+            
+
+              
+              <a href="/"
+                 class=" site-header-nav-item hvr-underline-from-center"
+                 target=""
+                 title="Home"
+                 style="color:black">
+                  Home
+              </a>
+               
+
+
+              
+
+
+              
+
+
+            
+
+               
+
+
+              
+                <div class="dropdown">
+                  <a class="site-header-nav-item hvr-underline-from-center" style="color:black">Project</a>
+                  <div class="dropdown-content">
+                     
+                      <a href="/open-source">Open Source</a>
+                     
+                      <a href="/newsletter">News Letter</a>
+                     
+                      <a href="/blog">Research Title</a>
+                     
+                      <a href="/master-code">Machine Learning Master Code</a>
+                    
+                  </div>
+                </div>
+              
+
+
+              
+
+
+            
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <!-- 글쓰는데 사용되는 HTML -->
+<section class="jumbotron geopattern" data-pattern-id="Bayesian Optimization using R and H2O">
+    <div class="container">
+        <div id="jumbotron-meta-info">
+            <h1>Bayesian Optimization using R and H2O</h1>
+            <span class="meta-info">
+                
+                
+                <span class="octicon octicon-calendar"></span> 2018/06/14
+                
+            </span>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function(){
+
+        $('.geopattern').each(function(){
+            $(this).geopattern($(this).data('pattern-id'));
+        });
+
+    });
+</script>
+<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
+	<script type="text/javascript" async
+		src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+    <div class="row">
+
+        
+        <div class="col-md-12 markdown-body">
+
+            <p>rBayesianOptimization을 사용한 h2o.gbm 튜닝 코드입니다. 모델 튜닝은 최적의 하이퍼 파라미터를 찾는 행위이고 이를 grid search라고 합니다.</p>
+
+<p>가장 많이 사용되고 있는 grid search 방법으로는 모든 가능한 경우를 테스트하는 Cartesian grid search방법과, 모든 가능한 경우 중 일부를 랜덤하게 선택하여 테스트하는 Random grid search방법이 존재합니다.</p>
+
+<p>Bayesian grid search방법은 기존의 Random, Cartesian방법 보다 더 고급진 grid search방법입니다.</p>
+
+<blockquote>
+  <p>Bayesian Optimization helped us find a hyperparameter configuration that is better than the one found by Random Search for a neural network on the San Francisco Crimes dataset. <a href="https://arimo.com/data-science/2016/bayesian-optimization-hyperparameter-tuning/">link</a></p>
+</blockquote>
+
+<p>Bayesian grid search의 특징은 최적의 하이퍼 파라미터를 찾는데 이전의 탐색 결과를 참고합니다. 이전에 탐색 결과를 다음 탐색에 참고하기 때문에 랜덤하게 탐색하는 것보다 더 효율적이라고 말할 수 있습니다.</p>
+
+<p><br /></p>
+
+<pre><code class="language-r"># bayesGridFun
+bayesGridFun &lt;- function(max_depth, min_rows, sample_rate, col_sample_rate){
+  gbm &lt;- h2o.gbm(
+    x = x, y = y, seed = 1234,
+    training_frame = h2o.rbind(train_hex, valid_hex),
+    nfolds = 3,
+    score_each_iteration = TRUE,
+    stopping_metric = "logloss",
+    ntrees = 10000,
+    stopping_rounds = autoGBM_BestParams$stopping_rounds,
+    stopping_tolerance = autoGBM_BestParams$stopping_tolerance,
+    categorical_encoding = autoGBM_BestParams$Random_categorical_encoding,
+    learn_rate = autoGBM_BestParams$Random_learn_rate,
+    max_depth = max_depth,
+    min_rows = min_rows,
+    sample_rate = sample_rate,
+    col_sample_rate = col_sample_rate
+  )
+  score &lt;- h2o.auc(gbm, xval = T)
+  list(Score = score, Pred  = 0)
+}
+
+# bayesGridOptions
+max_depth &lt;- autoGBM_BestParams$Random_max_depth
+sample_rate &lt;- autoGBM_BestParams$Random_sample_rate
+col_sample_rate &lt;- autoGBM_BestParams$Random_col_sample_rate
+min_rows &lt;- autoGBM_BestParams$Random_min_rows
+bayesGridOptions &lt;- list(
+  max_depth = as.integer(c(max(2, max_depth-1), max_depth+1)),
+  min_rows  = as.integer(c(max(1, min_rows-5), min_rows+5)),
+  sample_rate = c(sample_rate-0.1, min(sample_rate+0.1, 1)),
+  col_sample_rate = c(col_sample_rate-0.1, min(col_sample_rate+0.1, 1))
+)
+
+# bayesGridSearch
+set.seed(1234)
+bayesGridSearch &lt;- rBayesianOptimization::BayesianOptimization(
+  FUN = bayesGridFun,
+  bounds = bayesGridOptions,
+  init_points = init_points,
+  n_iter = n_iter,
+  acq = "ucb",
+  kappa = 2.576,
+  eps = 0.0,
+  verbose = TRUE
+)
+
+# H2OGBM_Bayesian
+H2OGBM_Bayesian &lt;- h2o.gbm(
+  x = x, y = y, seed = 1234,
+  model_id = "H2OGBM_Bayesian",
+  training_frame = train_hex,
+  validation_frame = valid_hex,
+  score_each_iteration = TRUE,
+  stopping_metric = "logloss",
+  ntrees = 10000,
+  stopping_rounds = autoGBM_BestParams$stopping_rounds,
+  stopping_tolerance = autoGBM_BestParams$stopping_tolerance,
+  categorical_encoding = autoGBM_BestParams$Random_categorical_encoding,
+  learn_rate = autoGBM_BestParams$Random_learn_rate,
+  max_depth = as.numeric(bayesGridSearch$Best_Par["max_depth"]),
+  min_rows = as.numeric(bayesGridSearch$Best_Par["min_rows"]),
+  sample_rate = as.numeric(bayesGridSearch$Best_Par["sample_rate"]),
+  col_sample_rate = as.numeric(bayesGridSearch$Best_Par["col_sample_rate"])
+)
+
+autoGBM_Models["H2OGBM_Bayesian"] &lt;- list(h2o.getModel("H2OGBM_Bayesian"))
+h2o.auc(h2o.performance(autoGBM_Models["H2OGBM_Bayesian"][[1]], newdata = test_hex))
+saveRDS(autoGBM_Models['H2OGBM_Bayesian'], file.path(model_path, "H2OGBM_Bayesian.rda"))
+autoGBM_BestParams['Bayes_max_depth'] &lt;- as.numeric(bayesGridSearch$Best_Par["max_depth"])
+autoGBM_BestParams['Bayes_min_rows'] &lt;- as.numeric(bayesGridSearch$Best_Par["min_rows"])
+autoGBM_BestParams['Bayes_sample_rate'] &lt;- as.numeric(bayesGridSearch$Best_Par["sample_rate"])
+autoGBM_BestParams['Bayes_col_sample_rate'] &lt;- as.numeric(bayesGridSearch$Best_Par["col_sample_rate"])
+
+</code></pre>
+
+<p><br /></p>
+
+
+            <!-- Comments -->
+            <!-- 
+ -->
+            <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://jacobgreen1984.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+        </div>
+        
+        -->
+
+    </div>
+
+</article>
+
+        </div>
+
+    <footer class="container">
+
+    <div class="site-footer">
+
+        <div class="pull-right">
+            <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+        </div>
+
+    </div>
+
+    <!-- Third-Party JS -->
+    <script type="text/javascript" src="/bower_components/geopattern/js/geopattern.min.js"></script>
+
+    <!-- My JS -->
+    <script type="text/javascript" src="/assets/js/script.js"></script>
+
+    
+
+    
+
+</footer>
+
+
+    </body>
+
+</html>

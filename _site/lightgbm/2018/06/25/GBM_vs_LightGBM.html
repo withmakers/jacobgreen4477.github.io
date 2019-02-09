@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-55499LK');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <title>Light GBM in R and Python (GBM vs Light GBM)</title>
+    <meta name="description"
+          content="Light GBM은 2014년 3월에 나온 XGBoost 알고리즘 이후, 2017년 1월에 발표된 알고리즘이다. GBM은 가지가 1번 분리될 때 2개씩 매번 분리가 되서 overfitting이 잘 일어난다. 하지만 LightGBM은 가지가 1번 분리(2개의 node 생성)될 때  ...">
+
+    <link rel="canonical" href="http://localhost:4000/lightgbm/2018/06/25/GBM_vs_LightGBM.html">
+    <link rel="alternate" type="application/rss+xml" title="제이콥의 <br> 머신러닝, 딥러닝, 인공지능 저장소" href="http://localhost:4000/feed.xml">
+
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Third-Party CSS -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="/bower_components/hover/css/hover-min.css">
+    <link rel="stylesheet" href="/bower_components/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/assets/css/common.css">
+
+    <!-- CSS set in page -->
+    
+
+    <!-- CSS set in layout -->
+    
+    <link rel="stylesheet" href="/assets/css/sidebar-post-nav.css">
+    
+
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+
+    <body>
+    
+    <!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55499LK"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+    <style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+
+<header class="site-header" style="background-color:white; margin-top:0">
+<!--<header class="site-header" style=background-color:white;>-->    
+    
+    <div class="container">
+        <span id="site-header-brand">
+            <!--<a href="https://jacobgreen4477.github.io/"><img src="https://raw.githubusercontent.com/jacobgreen4477/jacobgreen4477.github.io/master/_img/deepbro.png" style="max-width:25%;max-height:25%;"></img></a>-->
+        </span>
+        <nav class="site-header-nav" role="navigation">
+            
+
+              
+              <a href="/"
+                 class=" site-header-nav-item hvr-underline-from-center"
+                 target=""
+                 title="Home"
+                 style="color:black">
+                  Home
+              </a>
+               
+
+
+              
+
+
+              
+
+
+            
+
+               
+
+
+              
+                <div class="dropdown">
+                  <a class="site-header-nav-item hvr-underline-from-center" style="color:black">Project</a>
+                  <div class="dropdown-content">
+                     
+                      <a href="/open-source">Open Source</a>
+                     
+                      <a href="/newsletter">News Letter</a>
+                     
+                      <a href="/blog">Research Title</a>
+                     
+                      <a href="/master-code">Machine Learning Master Code</a>
+                    
+                  </div>
+                </div>
+              
+
+
+              
+
+
+            
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <!-- 글쓰는데 사용되는 HTML -->
+<section class="jumbotron geopattern" data-pattern-id="Light GBM in R and Python (GBM vs Light GBM)">
+    <div class="container">
+        <div id="jumbotron-meta-info">
+            <h1>Light GBM in R and Python (GBM vs Light GBM)</h1>
+            <span class="meta-info">
+                
+                
+                <span class="octicon octicon-calendar"></span> 2018/06/25
+                
+            </span>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function(){
+
+        $('.geopattern').each(function(){
+            $(this).geopattern($(this).data('pattern-id'));
+        });
+
+    });
+</script>
+<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
+	<script type="text/javascript" async
+		src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+    <div class="row">
+
+        
+        <div class="col-md-12 markdown-body">
+
+            <p>Light GBM은 2014년 3월에 나온 XGBoost 알고리즘 이후, 2017년 1월에 발표된 알고리즘이다. GBM은 가지가 1번 분리될 때 2개씩 매번 분리가 되서 overfitting이 잘 일어난다. 하지만 LightGBM은 가지가 1번 분리(2개의 node 생성)될 때  모든 가지를 분리하지 않고 2개의 node 중 잘 맞는 node 기준으로만 나눈다. 전체적인 아키텍처는 다음과 같다.</p>
+
+<p><br /></p>
+
+<h4 id="light-gbm-구조">Light GBM 구조</h4>
+
+<p><img src="https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/lightgbm.png" alt="Lightgbm" /></p>
+
+<p><br /></p>
+
+<h4 id="xgboost-구조">XGBoost 구조</h4>
+
+<p><img src="https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/xgboost.png" alt="xgboost" /></p>
+
+<p><br /></p>
+
+<p>XGBoost와 GBM은 둘 다 위와 같은 구조로 되어 있다. 따라서 node가 많이 생기므로, 모델이 더 복잡해진다. 복잡해진 모델은 overfitting을 야기하기 쉽다. 반면, LightGBM은 그림과 같이 node가 비교적 적게 생긴다. 따라서 GBM이나 XGBoost보다 overfitting이 일어날 확률이 더 적어진다.</p>
+
+<p>본 포스팅에서는 R과 Python 각각 GBM과 Light GBM을 비교해본다. 데이터는 “churn” 데이터이고 출처는 <a href="https://github.com/yhat/demo-churn-pred/blob/master/model/churn.csv">데이터 출처(Github)</a> 이다. 현재 H2O로 Light GBM 모델링은 XGBoost에 parameter를 조정해서 사용한다. 하지만 현재 XGBoost 모듈은 <strong>Windows 에는 지원을 하지 않으니</strong>, 아래에 있는 코드를 돌리기 위해서는 <em>Mac OS</em> 나 <em>linux</em> 등 <em>Windows</em> 이외의 환경에서 실행을 해야 한다.</p>
+
+<p><br /></p>
+
+<h4 id="성능비교-gbm-vs-light-gbm-in-r--python">성능비교 (GBM vs Light GBM in R &amp; Python)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>model</th>
+      <th>time(sec)</th>
+      <th>AUC</th>
+      <th>Logloss</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>H2O GBM in python</td>
+      <td>0.98</td>
+      <td>0.9118</td>
+      <td>0.1954</td>
+    </tr>
+    <tr>
+      <td>H2O Light GBM in python</td>
+      <td>2.31</td>
+      <td>0.9234</td>
+      <td>0.1694</td>
+    </tr>
+    <tr>
+      <td>H2O GBM in R</td>
+      <td>2.85</td>
+      <td>0.9118</td>
+      <td>0.1954</td>
+    </tr>
+    <tr>
+      <td>H2O Light GBM in R</td>
+      <td>3.91</td>
+      <td>0.9234</td>
+      <td>0.1694</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h4 id="전체-분석-코드">전체 분석 코드</h4>
+
+<ul>
+  <li><a href="https://github.com/2econsulting/2econsulting.github.io/blob/master/_posts_w_code/GBMvsLightGBM_R.r">GBM vs Light GBM in R</a></li>
+  <li><a href="https://github.com/2econsulting/2econsulting.github.io/blob/master/_posts_w_code/GBMvsLightGBM_Python.py">GBM vs Light GBM in Python</a></li>
+</ul>
+
+<p><br /></p>
+
+
+            <!-- Comments -->
+            <!-- 
+ -->
+            <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://jacobgreen1984.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+        </div>
+        
+        -->
+
+    </div>
+
+</article>
+
+        </div>
+
+    <footer class="container">
+
+    <div class="site-footer">
+
+        <div class="pull-right">
+            <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+        </div>
+
+    </div>
+
+    <!-- Third-Party JS -->
+    <script type="text/javascript" src="/bower_components/geopattern/js/geopattern.min.js"></script>
+
+    <!-- My JS -->
+    <script type="text/javascript" src="/assets/js/script.js"></script>
+
+    
+
+    
+
+</footer>
+
+
+    </body>
+
+</html>

@@ -1,43 +1,122 @@
 ---
 layout: default
-title: Homepage
+menu: home
+css: ['index.css', 'sidebar-popular-repo.css']
 ---
 
-<div id="home">
-  <ul class="posts">
-    {% for post in paginator.posts %}
-    <li itemscope itemtype="http://schema.org/BlogPosting">
-      <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">
-        <div class="p-wrap">
-          <article class="inner">
-            <time datetime="{{ post.date | date_to_xmlschema }}"
-                itemprop="datePublished">
-              {{ post.date | date_to_string }}
-            </time>
-            <p itemprop="name headline">{{ post.title }}</p>
-          </article>
-        </div>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+<style>
+ul.a {list-style-type: circle;}
+li {font-size: 15px;}
+</style>
 
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.next_page %}
-  <a href="{{ site.baseurl }}/page/{{paginator.next_page}}" class="older">Older</a>
-  {% else %}
-  <span class="next">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-    <a href="{{ site.baseurl }}/" class="newer">Newer</a>
-    {% else %}
-    <a href="{{ site.baseurl }}/page/{{paginator.previous_page}}" class="newer">Newer</a>
-    {% endif %}
-  {% else %}
-  <span class="previous">Newer</span>
-  {% endif %}
-</div>
-{% endif %}
+<section class="jumbotron" style="background-image: url(https://raw.githubusercontent.com/jacobgreen4477/jacobgreen4477.github.io/master/_img/wave_v1.png);background-repeat: no-repeat; background-size: 100% 100%;">
+<!--<section class="jumbotron">-->   
+    <div class="container">
+        <h1>{{ site.title }}</h1>
+        <div id="jumbotron-meta-info">
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-organization"></span>
+                <a href="{{ site.company_url }}" target="_blank">{{ site.company }}</a>
+            </span> 
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-mark-github"></span>
+                <a href="{{ site.github_url }}" target="_blank">깃허브</a>
+            </span> 
+
+            <!--
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-plus"></span>
+                <a href="https://2econsulting.github.io/subscribe" target="_blank">구독</a>
+            </span>
+
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-mail"></span>
+                <a href="https://flaskapp2e.herokuapp.com" target="_blank">PFMS</a>
+            </span>
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-graph"></span>
+                <a href="https://2econsulting.github.io/request/request" target="_blank">분석request</a>
+            </span>
+            -->
+        </div>
+    </div>
+</section>
+
+<!--<section class="content container">-->
+
+    <div class="row">
+
+        <div class="col-md-3 text-center">
+        <h4 class="sidebar-title">[[ 데이터 사이언스 뉴스레터 ]]</h4>
+        <br>
+        {% assign sorted-newsletters = site.categories.newsletters | sort: 'title' | reverse %}
+        {% for newsletter in sorted-newsletters %}
+        <ul class="a">
+          <li><a href="{{ site.url }}{{ newsletter.url }}">{{ newsletter.title }}</a></li>
+        </ul>
+        {% endfor %}
+        </div>
+
+        <br>
+
+        <!-- Post List -->
+        <div class="col-md-6">
+
+            <div style="margin-top: -1%">
+        	<form action="/search.html" method="get">
+			  <label for="search-box"></label>
+			  <input type="text" id="search-box" name="query">
+			  <input type="submit" value="검색">
+			</form>
+            </div>
+
+            <ol class="post-list">
+                {% for post in paginator.posts %}
+                {% unless post.title contains '데이터 사이언스 뉴스레터' %}
+                <li class="post-list-item">
+                    <h2 class="post-list-title">
+                        <a class="hvr-underline-from-center" href="{{ site.url }}{{ post.url }}" style="line-height:normal;">{{ post.title }}</a>
+                    </h2>
+                    <p class="post-list-description" style="overflow:hidden ;position:relative; line-height:1.3em; max-height:3.9em; text-align:justify; margin-right:-1em; padding-right:1em;">
+                        {{ post.excerpt | strip_html | strip }}
+                    </p>
+                    <p class="post-list-meta">
+                        <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
+                    </p>
+                </li>
+                {% endunless %}
+                {% endfor %}
+            </ol>
+
+            <!-- Pagination -->
+            {% include pagination.html %}
+
+            <!-- Pagination links -->
+            <!--
+            <div class="pagination">
+              {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+              {% else %}
+            <span class="previous">Previous</span>
+              {% endif %}
+              <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+              {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+              {% else %}
+            <span class="next ">Next</span>
+              {% endif %}
+            </div>
+            -->
+
+            <!-- Comments -->
+            {% include disqus-comments.html %}
+
+        </div>
+
+        <div class="col-md-2" style="left:5%">
+            {% include sidebar-popular-repo.html %}
+        </div>  
+
+    <!--</div>-->
+
+</section>

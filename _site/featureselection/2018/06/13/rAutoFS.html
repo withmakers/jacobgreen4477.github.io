@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-55499LK');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <title>자동변수선택(rAutoFS) R패키지 개발</title>
+    <meta name="description"
+          content="h2o.automl(h2o 3.20)는 여러 기초 모델을 생성하고 생성 된 기초 모델을 앙상블하여 보다 우수한 예측 모델을 생성하는 h2o패키지 함수입니다. 여기서 기초 모델을 앙상블할 경우 예측 성능이 높아지는데 이 경우 모델 위에 모델을 쌓는 방식이기 때문에 변수 중요도를 산출...">
+
+    <link rel="canonical" href="http://localhost:4000/featureselection/2018/06/13/rAutoFS.html">
+    <link rel="alternate" type="application/rss+xml" title="제이콥의 <br> 머신러닝, 딥러닝, 인공지능 저장소" href="http://localhost:4000/feed.xml">
+
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Third-Party CSS -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="/bower_components/hover/css/hover-min.css">
+    <link rel="stylesheet" href="/bower_components/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/assets/css/common.css">
+
+    <!-- CSS set in page -->
+    
+
+    <!-- CSS set in layout -->
+    
+    <link rel="stylesheet" href="/assets/css/sidebar-post-nav.css">
+    
+
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+
+    <body>
+    
+    <!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55499LK"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+    <style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+
+<header class="site-header" style="background-color:white; margin-top:0">
+<!--<header class="site-header" style=background-color:white;>-->    
+    
+    <div class="container">
+        <span id="site-header-brand">
+            <!--<a href="https://jacobgreen4477.github.io/"><img src="https://raw.githubusercontent.com/jacobgreen4477/jacobgreen4477.github.io/master/_img/deepbro.png" style="max-width:25%;max-height:25%;"></img></a>-->
+        </span>
+        <nav class="site-header-nav" role="navigation">
+            
+
+              
+              <a href="/"
+                 class=" site-header-nav-item hvr-underline-from-center"
+                 target=""
+                 title="Home"
+                 style="color:black">
+                  Home
+              </a>
+               
+
+
+              
+
+
+              
+
+
+            
+
+               
+
+
+              
+                <div class="dropdown">
+                  <a class="site-header-nav-item hvr-underline-from-center" style="color:black">Project</a>
+                  <div class="dropdown-content">
+                     
+                      <a href="/open-source">Open Source</a>
+                     
+                      <a href="/newsletter">News Letter</a>
+                     
+                      <a href="/blog">Research Title</a>
+                     
+                      <a href="/master-code">Machine Learning Master Code</a>
+                    
+                  </div>
+                </div>
+              
+
+
+              
+
+
+            
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <!-- 글쓰는데 사용되는 HTML -->
+<section class="jumbotron geopattern" data-pattern-id="자동변수선택(rAutoFS) R패키지 개발">
+    <div class="container">
+        <div id="jumbotron-meta-info">
+            <h1>자동변수선택(rAutoFS) R패키지 개발</h1>
+            <span class="meta-info">
+                
+                
+                <span class="octicon octicon-calendar"></span> 2018/06/13
+                
+            </span>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function(){
+
+        $('.geopattern').each(function(){
+            $(this).geopattern($(this).data('pattern-id'));
+        });
+
+    });
+</script>
+<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
+	<script type="text/javascript" async
+		src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+    <div class="row">
+
+        
+        <div class="col-md-12 markdown-body">
+
+            <p>h2o.automl(h2o 3.20)는 여러 기초 모델을 생성하고 생성 된 기초 모델을 앙상블하여 보다 우수한 예측 모델을 생성하는 h2o패키지 함수입니다. 여기서 기초 모델을 앙상블할 경우 예측 성능이 높아지는데 이 경우 모델 위에 모델을 쌓는 방식이기 때문에 변수 중요도를 산출할 수 없다는 단점이 존재합니다.</p>
+
+<p>rAutoFS(Auto Feature Selection in R)는 이러한 단점을 보완하는 차원에서 개발되었습니다. rAutoFS는 h2o.automl을 사용하여 변수 중요도를 산출합니다. 변수 중요도 산출 로직은 심플합니다. 기초 모델의 변수 중요도를 종합하여 변수 종합 순위를 도출하고 이를 기반으로 변수 중요도를 산출합니다.</p>
+
+<ol>
+  <li>h2o.automl학습을 통해서 다수의 예측 모델 생성</li>
+  <li>생성 된 예측 모델에서 예측 성능이 높은 TOP N개의 모델을 선택 (num_of_model)</li>
+  <li>TOP N개의 모델의 변수 중요도 도출</li>
+  <li>도출 된 변수 중요도을 기준으로 vote방식으로 h2o.automl의 변수 중요도 종합</li>
+</ol>
+
+<p>rAutoFS::autoFS의 변수 중요도 결과는 다음과 같습니다. (패키지 example)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">rank</th>
+      <th style="text-align: left">vi_GBM14</th>
+      <th style="text-align: left">vi_GBM0</th>
+      <th style="text-align: left">vi_GBM1</th>
+      <th style="text-align: left">vi_GBM23</th>
+      <th style="text-align: left">vi_GBM55</th>
+      <th style="text-align: left">vi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">1</td>
+      <td style="text-align: left">Day.Charge</td>
+      <td style="text-align: left">State</td>
+      <td style="text-align: left">State</td>
+      <td style="text-align: left">State</td>
+      <td style="text-align: left">State</td>
+      <td style="text-align: left">State</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">2</td>
+      <td style="text-align: left">State</td>
+      <td style="text-align: left">Day.Charge</td>
+      <td style="text-align: left">Day.Charge</td>
+      <td style="text-align: left">Day.Charge</td>
+      <td style="text-align: left">Day.Charge</td>
+      <td style="text-align: left">Day.Charge</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">3</td>
+      <td style="text-align: left">CustServ.Calls</td>
+      <td style="text-align: left">CustServ.Calls</td>
+      <td style="text-align: left">CustServ.Calls</td>
+      <td style="text-align: left">Day.Mins</td>
+      <td style="text-align: left">Eve.Mins</td>
+      <td style="text-align: left">CustServ.Calls</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">4</td>
+      <td style="text-align: left">Int.l.Plan</td>
+      <td style="text-align: left">Day.Mins</td>
+      <td style="text-align: left">Day.Mins</td>
+      <td style="text-align: left">CustServ.Calls</td>
+      <td style="text-align: left">Int.l.Plan</td>
+      <td style="text-align: left">Int.l.Plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">5</td>
+      <td style="text-align: left">Day.Mins</td>
+      <td style="text-align: left">Eve.Mins</td>
+      <td style="text-align: left">Eve.Mins</td>
+      <td style="text-align: left">Eve.Mins</td>
+      <td style="text-align: left">Night.Mins</td>
+      <td style="text-align: left">Eve.Mins</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">6</td>
+      <td style="text-align: left">Intl.Charge</td>
+      <td style="text-align: left">Int.l.Plan</td>
+      <td style="text-align: left">Int.l.Plan</td>
+      <td style="text-align: left">Intl.Calls</td>
+      <td style="text-align: left">Intl.Calls</td>
+      <td style="text-align: left">Int.l.Plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">7</td>
+      <td style="text-align: left">Eve.Charge</td>
+      <td style="text-align: left">Intl.Calls</td>
+      <td style="text-align: left">Intl.Calls</td>
+      <td style="text-align: left">Int.l.Plan</td>
+      <td style="text-align: left">Night.Calls</td>
+      <td style="text-align: left">Intl.Calls</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">8</td>
+      <td style="text-align: left">VMail.Plan</td>
+      <td style="text-align: left">Eve.Charge</td>
+      <td style="text-align: left">Intl.Charge</td>
+      <td style="text-align: left">Intl.Charge</td>
+      <td style="text-align: left">CustServ.Calls</td>
+      <td style="text-align: left">Intl.Charge</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">9</td>
+      <td style="text-align: left">Intl.Calls</td>
+      <td style="text-align: left">VMail.Message</td>
+      <td style="text-align: left">Eve.Charge</td>
+      <td style="text-align: left">Eve.Charge</td>
+      <td style="text-align: left">Intl.Charge</td>
+      <td style="text-align: left">Eve.Charge</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">10</td>
+      <td style="text-align: left">Eve.Mins</td>
+      <td style="text-align: left">Intl.Charge</td>
+      <td style="text-align: left">VMail.Message</td>
+      <td style="text-align: left">Intl.Mins</td>
+      <td style="text-align: left">Day.Mins</td>
+      <td style="text-align: left">Eve.Mins</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">11</td>
+      <td style="text-align: left">Night.Mins</td>
+      <td style="text-align: left">Intl.Mins</td>
+      <td style="text-align: left">Intl.Mins</td>
+      <td style="text-align: left">VMail.Plan</td>
+      <td style="text-align: left">Account.Length</td>
+      <td style="text-align: left">Intl.Mins</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">12</td>
+      <td style="text-align: left">Night.Charge</td>
+      <td style="text-align: left">VMail.Plan</td>
+      <td style="text-align: left">VMail.Plan</td>
+      <td style="text-align: left">Day.Calls</td>
+      <td style="text-align: left">Eve.Calls</td>
+      <td style="text-align: left">VMail.Plan</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">13</td>
+      <td style="text-align: left">Intl.Mins</td>
+      <td style="text-align: left">Night.Mins</td>
+      <td style="text-align: left">Night.Mins</td>
+      <td style="text-align: left">Night.Charge</td>
+      <td style="text-align: left">Night.Charge</td>
+      <td style="text-align: left">Night.Mins</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">14</td>
+      <td style="text-align: left">Eve.Calls</td>
+      <td style="text-align: left">Night.Charge</td>
+      <td style="text-align: left">Night.Charge</td>
+      <td style="text-align: left">VMail.Message</td>
+      <td style="text-align: left">Intl.Mins</td>
+      <td style="text-align: left">Night.Charge</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">15</td>
+      <td style="text-align: left">Account.Length</td>
+      <td style="text-align: left">Night.Calls</td>
+      <td style="text-align: left">Account.Length</td>
+      <td style="text-align: left">Night.Calls</td>
+      <td style="text-align: left">Day.Calls</td>
+      <td style="text-align: left">Account.Length</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">16</td>
+      <td style="text-align: left">Night.Calls</td>
+      <td style="text-align: left">Day.Calls</td>
+      <td style="text-align: left">Night.Calls</td>
+      <td style="text-align: left">Night.Mins</td>
+      <td style="text-align: left">VMail.Plan</td>
+      <td style="text-align: left">Night.Calls</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">17</td>
+      <td style="text-align: left">Day.Calls</td>
+      <td style="text-align: left">Account.Length</td>
+      <td style="text-align: left">Day.Calls</td>
+      <td style="text-align: left">Account.Length</td>
+      <td style="text-align: left">Eve.Charge</td>
+      <td style="text-align: left">Day.Calls</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">18</td>
+      <td style="text-align: left">VMail.Message</td>
+      <td style="text-align: left">Eve.Calls</td>
+      <td style="text-align: left">Eve.Calls</td>
+      <td style="text-align: left">Eve.Calls</td>
+      <td style="text-align: left">Area.Code</td>
+      <td style="text-align: left">Eve.Calls</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">19</td>
+      <td style="text-align: left">Area.Code</td>
+      <td style="text-align: left">Area.Code</td>
+      <td style="text-align: left">Area.Code</td>
+      <td style="text-align: left">Area.Code</td>
+      <td style="text-align: left">VMail.Message</td>
+      <td style="text-align: left">Area.Code</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h4 id="rautofs-설치-방법">rAutoFS 설치 방법</h4>
+<pre><code class="language-r">library(devtools)
+install_github("jacobgreen1984/rAutoFE")
+library(rAutoFE)
+</code></pre>
+
+<p><br /></p>
+
+<h4 id="rautofs-실행-방법">rAutoFS 실행 방법</h4>
+<pre><code class="language-r">library(rAutoFS)
+library(h2o)
+h2o.init()
+data(churn, package = "rAutoFS")
+data_hex &lt;- as.h2o(churn)
+y = "Churn."
+x = colnames(data_hex)[colnames(data_hex)!=y]
+autoFS(data_hex, x, y, num_of_model=5, num_of_vi=10)
+</code></pre>
+
+<p><br /></p>
+
+
+            <!-- Comments -->
+            <!-- 
+ -->
+            <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://jacobgreen1984.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+        </div>
+        
+        -->
+
+    </div>
+
+</article>
+
+        </div>
+
+    <footer class="container">
+
+    <div class="site-footer">
+
+        <div class="pull-right">
+            <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+        </div>
+
+    </div>
+
+    <!-- Third-Party JS -->
+    <script type="text/javascript" src="/bower_components/geopattern/js/geopattern.min.js"></script>
+
+    <!-- My JS -->
+    <script type="text/javascript" src="/assets/js/script.js"></script>
+
+    
+
+    
+
+</footer>
+
+
+    </body>
+
+</html>
