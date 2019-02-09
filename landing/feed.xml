@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>withmakers &lt;br&gt; 비트코인 &amp; 부동산 데이터분석</title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 09 Feb 2019 22:34:24 +0900</pubDate>
+    <lastBuildDate>Sat, 09 Feb 2019 22:34:24 +0900</lastBuildDate>
+    <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>DB손해보험으로 이직</title>
+        <description>&lt;p&gt;(냉무)&lt;/p&gt;
+</description>
+        <pubDate>Mon, 07 Jan 2019 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/etc/2019/01/07/DB.html</link>
+        <guid isPermaLink="true">http://localhost:4000/etc/2019/01/07/DB.html</guid>
+        
+        <category>etc</category>
+        
+        
+        <category>etc</category>
+        
+      </item>
+    
+      <item>
+        <title>(Kaggle Home Credit) top 1% with only 2 submissions? how?</title>
+        <description>&lt;p&gt;learning from arnowaczynski&lt;/p&gt;
+
+&lt;p&gt;https://www.kaggle.com/c/home-credit-default-risk/discussion/64609&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/kaggle_homecredit_top1%.jpg&quot; style=&quot;width: 70%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[[ 모델 블랜딩 전략 ]]&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;many CV runs with random seeds with different random split(10 folds)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;simple average of top 30 models&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ridge regression on top 60 models&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/kaggle_homecredit_top1%_v2.jpg&quot; style=&quot;width: 70%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[[ 하이퍼 파라미터 탐색 전략 ]]&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;num_boost_round = 10000 with early_stopping_rounds=200&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;bagging_freq = 1&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;tuning hyper-params(6):  learning_rate, num_leaves, max_depth, min_data_in_leaf, feature_fraction,  bagging_freq&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;random grid search&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;set discrete search space for each params&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;while searching, print every cv score with selected hyper-parameters&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;at any time, stop search and adjust the search space (make sure not same parames evaluated more than once)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 31 Aug 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/kaggle/2018/08/31/kaggleHomecredit2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/kaggle/2018/08/31/kaggleHomecredit2.html</guid>
+        
+        <category>Kaggle</category>
+        
+        
+        <category>Kaggle</category>
+        
+      </item>
+    
+      <item>
+        <title>Kaggle Santander Value Prediction TOP 8%</title>
+        <description>&lt;p&gt;The digitalization of everyday lives means that customers expect services to be delivered in a personalized and timely manner… and often before they´ve even realized they need the service. In their 3rd Kaggle competition, Santander Group aims to go a step beyond recognizing that there is a need to provide a customer a financial service and intends to determine the amount or value of the customer’s transaction. This means anticipating customer needs in a more concrete, but also simple and personal way. With so many choices for financial services, this need is greater now than ever before.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Santander Group is asking Kagglers to help them identify the value of transactions for each potential customer.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;[feature engineering]&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;leak features from kernel&lt;/li&gt;
+  &lt;li&gt;statistical features (max, min, sd, median, avg)&lt;/li&gt;
+  &lt;li&gt;na count features by row&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;[modeling]&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;single light gbm&lt;/li&gt;
+  &lt;li&gt;bayesian grid search&lt;/li&gt;
+  &lt;li&gt;cv predict&lt;/li&gt;
+  &lt;li&gt;boosting samples&lt;/li&gt;
+  &lt;li&gt;cut range&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/kaggle_santander.png&quot; style=&quot;width: 30%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/kaggle_santander2.png&quot; style=&quot;width: 70%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 30 Aug 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/kaggle/2018/08/30/kaggleSantander.html</link>
+        <guid isPermaLink="true">http://localhost:4000/kaggle/2018/08/30/kaggleSantander.html</guid>
+        
+        <category>Kaggle</category>
+        
+        
+        <category>Kaggle</category>
+        
+      </item>
+    
+      <item>
+        <title>Kaggle Home Credit Default Risk TOP 6%</title>
+        <description>&lt;p&gt;Home Credit strives to broaden financial inclusion for the unbanked population by providing a positive and safe borrowing experience. In order to make sure this underserved population has a positive loan experience, Home Credit makes use of a variety of alternative data–including telco and transactional information–to predict their clients’ repayment abilities.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;While Home Credit is currently using various statistical and machine learning methods to make these predictions, they’re challenging Kagglers to help them unlock the full potential of their data.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;[feature engineering]&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;collect many ideas from kernel&lt;/li&gt;
+  &lt;li&gt;interaction features&lt;/li&gt;
+  &lt;li&gt;indicator features&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;[modeling]&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;many light gbm models with different dataset&lt;/li&gt;
+  &lt;li&gt;bayesian grid search&lt;/li&gt;
+  &lt;li&gt;cv predict&lt;/li&gt;
+  &lt;li&gt;boosting samples&lt;/li&gt;
+  &lt;li&gt;blend of base models&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/kaggle_homecredit.png&quot; style=&quot;width: 30%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/kaggle_homecredit2.png&quot; style=&quot;width: 70%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 30 Aug 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/kaggle/2018/08/30/kaggleHomecredit.html</link>
+        <guid isPermaLink="true">http://localhost:4000/kaggle/2018/08/30/kaggleHomecredit.html</guid>
+        
+        <category>Kaggle</category>
+        
+        
+        <category>Kaggle</category>
+        
+      </item>
+    
+      <item>
+        <title>Kaggle Titanic Machine Learning from Disaster TOP 3%</title>
+        <description>&lt;p&gt;캐글(Kaggle)은 전세계에서 가장 큰 데이터 분석 경진 대회입니다.&lt;/p&gt;
+
+&lt;p&gt;https://www.kaggle.com/&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;캐글은 2010년 설립된 예측모델 및 분석 대회 플랫폼이다. 기업 및 단체에서 데이터와 해결과제를 등록하면, 데이터 과학자들이 이를 해결하는 모델을 개발하고 경쟁한다. 2017년 3월 구글에 인수되었다. (위키피디아)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4&gt;Titanic Competition 소개&lt;/h4&gt;
+
+&lt;p&gt;Titanic Competition은 데이터 분석 입문자들을 위한 캐글 데이터 분석 대회입니다.
+Titanic Competition은 1912년 4월 15일 타이타닉 침몰 사고의 실제 데이터 입니다.
+데이터셋에는 객실 등급, 나이, 성별, 항만, 티켓번호 이름 등의 정보가 있고 이를 사용해서 승객의 생존을 예측하는 경진 대회입니다.&lt;/p&gt;
+
+&lt;p&gt;DS랩도 Titanic Competition에 참여헸고 결과는 다음과 같습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/kaggle_titanic.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/kaggle_titanic2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4&gt;사용한 머신러닝 알고리즘&lt;/h4&gt;
+
+&lt;p&gt;Titanic Competition 경진대회에서 사용한 분석 방법은 다음과 같습니다. (RANK TOP 3%)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;사용한 머신러닝 알고리즘 : CatBoost, H2O XGBoost, H2O Light GBM&lt;/li&gt;
+  &lt;li&gt;CatBoost, (H2O) XGBoost, (H2O) Light GBM in R and Python 모델 튜닝 코드 (https://github.com/2econsulting/Kaggle)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;file name&lt;/th&gt;
+      &lt;th&gt;accuracy&lt;/th&gt;
+      &lt;th&gt;threshold&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;R_TEST_CATBOOST_TUNE_P1.csv&lt;/td&gt;
+      &lt;td&gt;0.82296&lt;/td&gt;
+      &lt;td&gt;&amp;gt;0.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;R_TEST_CATBOOST_TUNE_CVP1.csv&lt;/td&gt;
+      &lt;td&gt;0.81818&lt;/td&gt;
+      &lt;td&gt;&amp;gt;0.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;R_TEST_H2OXGB_TUNE_CVP1.csv&lt;/td&gt;
+      &lt;td&gt;0.81339&lt;/td&gt;
+      &lt;td&gt;&amp;gt;0.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;R_TEST_CATBOOST_TUNE_CVP1_78.csv&lt;/td&gt;
+      &lt;td&gt;0.81339&lt;/td&gt;
+      &lt;td&gt;&amp;gt;0.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;R_TEST_H2OLGB_TUNE_CVP1.csv&lt;/td&gt;
+      &lt;td&gt;0.81818&lt;/td&gt;
+      &lt;td&gt;&amp;gt;0.5&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;단일 모델로는 CatBoot의 0.82296(AUC)으로 가장 높았습니다.&lt;/p&gt;
+
+&lt;p&gt;CatBoost, H2O XGBoost, H2O Light GBM의 예측값을 다수결 방식으로 결합한 Stacking 모델은 0.83253(AUC)을 얻었습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/kaggle_titanic3.png&quot; style=&quot;width: 50%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 10 Jul 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/kaggle/2018/07/10/kaggleTitanic.html</link>
+        <guid isPermaLink="true">http://localhost:4000/kaggle/2018/07/10/kaggleTitanic.html</guid>
+        
+        <category>Kaggle</category>
+        
+        
+        <category>Kaggle</category>
+        
+      </item>
+    
+      <item>
+        <title>Featuretools(automating feature engineering) in Python</title>
+        <description>&lt;p&gt;연구 중, 업로드 예정일 2018년 9월 30일&lt;/p&gt;
+</description>
+        <pubDate>Fri, 29 Jun 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/featuretools/python/2018/06/29/featuretools.html</link>
+        <guid isPermaLink="true">http://localhost:4000/featuretools/python/2018/06/29/featuretools.html</guid>
+        
+        <category>Featuretools</category>
+        
+        <category>Python</category>
+        
+        
+        <category>Featuretools</category>
+        
+        <category>Python</category>
+        
+      </item>
+    
+      <item>
+        <title>Light GBM in R and Python (GBM vs Light GBM)</title>
+        <description>&lt;p&gt;Light GBM은 2014년 3월에 나온 XGBoost 알고리즘 이후, 2017년 1월에 발표된 알고리즘이다. GBM은 가지가 1번 분리될 때 2개씩 매번 분리가 되서 overfitting이 잘 일어난다. 하지만 LightGBM은 가지가 1번 분리(2개의 node 생성)될 때  모든 가지를 분리하지 않고 2개의 node 중 잘 맞는 node 기준으로만 나눈다. 전체적인 아키텍처는 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;light-gbm-구조&quot;&gt;Light GBM 구조&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/lightgbm.png&quot; alt=&quot;Lightgbm&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;xgboost-구조&quot;&gt;XGBoost 구조&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/xgboost.png&quot; alt=&quot;xgboost&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;XGBoost와 GBM은 둘 다 위와 같은 구조로 되어 있다. 따라서 node가 많이 생기므로, 모델이 더 복잡해진다. 복잡해진 모델은 overfitting을 야기하기 쉽다. 반면, LightGBM은 그림과 같이 node가 비교적 적게 생긴다. 따라서 GBM이나 XGBoost보다 overfitting이 일어날 확률이 더 적어진다.&lt;/p&gt;
+
+&lt;p&gt;본 포스팅에서는 R과 Python 각각 GBM과 Light GBM을 비교해본다. 데이터는 “churn” 데이터이고 출처는 &lt;a href=&quot;https://github.com/yhat/demo-churn-pred/blob/master/model/churn.csv&quot;&gt;데이터 출처(Github)&lt;/a&gt; 이다. 현재 H2O로 Light GBM 모델링은 XGBoost에 parameter를 조정해서 사용한다. 하지만 현재 XGBoost 모듈은 &lt;strong&gt;Windows 에는 지원을 하지 않으니&lt;/strong&gt;, 아래에 있는 코드를 돌리기 위해서는 &lt;em&gt;Mac OS&lt;/em&gt; 나 &lt;em&gt;linux&lt;/em&gt; 등 &lt;em&gt;Windows&lt;/em&gt; 이외의 환경에서 실행을 해야 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;성능비교-gbm-vs-light-gbm-in-r--python&quot;&gt;성능비교 (GBM vs Light GBM in R &amp;amp; Python)&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;model&lt;/th&gt;
+      &lt;th&gt;time(sec)&lt;/th&gt;
+      &lt;th&gt;AUC&lt;/th&gt;
+      &lt;th&gt;Logloss&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;H2O GBM in python&lt;/td&gt;
+      &lt;td&gt;0.98&lt;/td&gt;
+      &lt;td&gt;0.9118&lt;/td&gt;
+      &lt;td&gt;0.1954&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;H2O Light GBM in python&lt;/td&gt;
+      &lt;td&gt;2.31&lt;/td&gt;
+      &lt;td&gt;0.9234&lt;/td&gt;
+      &lt;td&gt;0.1694&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;H2O GBM in R&lt;/td&gt;
+      &lt;td&gt;2.85&lt;/td&gt;
+      &lt;td&gt;0.9118&lt;/td&gt;
+      &lt;td&gt;0.1954&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;H2O Light GBM in R&lt;/td&gt;
+      &lt;td&gt;3.91&lt;/td&gt;
+      &lt;td&gt;0.9234&lt;/td&gt;
+      &lt;td&gt;0.1694&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;전체-분석-코드&quot;&gt;전체 분석 코드&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/2econsulting/2econsulting.github.io/blob/master/_posts_w_code/GBMvsLightGBM_R.r&quot;&gt;GBM vs Light GBM in R&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/2econsulting/2econsulting.github.io/blob/master/_posts_w_code/GBMvsLightGBM_Python.py&quot;&gt;GBM vs Light GBM in Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 25 Jun 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/lightgbm/2018/06/25/GBM_vs_LightGBM.html</link>
+        <guid isPermaLink="true">http://localhost:4000/lightgbm/2018/06/25/GBM_vs_LightGBM.html</guid>
+        
+        <category>LightGBM</category>
+        
+        <category>R</category>
+        
+        
+        <category>LightGBM</category>
+        
+      </item>
+    
+      <item>
+        <title>CatBoost 튜닝 in R (using caret패키지)</title>
+        <description>&lt;p&gt;caret패키지를 사용한 CatBoost 튜닝 v0.01 (random grid search)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;# library 
+library(catboost)
+library(caret)
+library(titanic)
+
+# load data
+data &amp;lt;- as.data.frame(as.matrix(titanic::titanic_train), stringsAsFactors=TRUE)
+
+# handle missing value
+age_levels &amp;lt;- levels(data$Age)
+most_frequent_age &amp;lt;- which.max(table(data$Age))
+data$Age[is.na(data$Age)] &amp;lt;- age_levels[most_frequent_age]
+
+# set x and y 
+drop_columns = c(&quot;PassengerId&quot;, &quot;Survived&quot;, &quot;Name&quot;, &quot;Ticket&quot;, &quot;Cabin&quot;)
+x &amp;lt;- data[,!(names(data) %in% drop_columns)]
+y &amp;lt;- data[,c(&quot;Survived&quot;)]
+
+# use caret for grid search 
+fit_control &amp;lt;- caret::trainControl(
+  method = &quot;cv&quot;, 
+  number = 3, 
+  search = &quot;random&quot;,
+  classProbs = TRUE
+)
+
+# set grid options
+grid &amp;lt;- expand.grid(
+  depth = c(4, 6, 8),
+  learning_rate = 0.1,
+  l2_leaf_reg = 0.1,
+  rsm = 0.95,
+  border_count = 64,
+  iterations = 10
+)
+
+# train catboost
+model &amp;lt;- caret::train(
+  x = x, 
+  y = as.factor(make.names(y)),
+  method = catboost.caret,
+  metric = &quot;Accuracy&quot;,
+  maximize = TRUE,
+  preProc = NULL,
+  tuneGrid = grid, 
+  tuneLength = 30, 
+  trControl = fit_control
+)
+print(model)
+
+# variable importance
+importance &amp;lt;- varImp(model, scale = FALSE)
+print(importance)
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+        <pubDate>Sun, 17 Jun 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/catboost/2018/06/17/tuningCatBoost.html</link>
+        <guid isPermaLink="true">http://localhost:4000/catboost/2018/06/17/tuningCatBoost.html</guid>
+        
+        <category>CatBoost</category>
+        
+        <category>R</category>
+        
+        <category>Python</category>
+        
+        
+        <category>CatBoost</category>
+        
+      </item>
+    
+      <item>
+        <title>CatBoost in R &amp; Python (simple version)</title>
+        <description>&lt;p&gt;새로운 머신러닝 알고리즘 CatBoost가 등장했습니다. 러시아 과학자가 개발한 CatBoost는 Tree Boosting 계열의 최신 머신러닝 알고리즘 입니다. 최근 들어 Tree Boosting 계열의 머신러닝 알고리즘이 활발하게 연구되고 있습니다. 이는 아마도 XGBoost가 캐글 대회에서 수차례 winning solution으로 검증되면서 많은 과학자들이 XGBoost와 같은 Tree Boosting 머신러닝 기법에 많은 관심을 갖고 있는 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4&gt;Tree Boosting 머신러닝 변천사&lt;/h4&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/catboostlightgbmxgb.png&quot; alt=&quot;img&quot; style=&quot;width:90%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4&gt;CatBoost의 장점&lt;/h4&gt;
+&lt;p&gt;특히 CatBoost의 full name은 Categorical Boost으로 범주형 변수가 많은 데이터셋에서 예측 성능이 우수하다고 합니다. &lt;a href=&quot;https://www.analyticsvidhya.com/blog/2017/08/catboost-automated-categorical-data/&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;높은 예측 성능&lt;/li&gt;
+  &lt;li&gt;범주형 변수를 자동으로 전처리&lt;/li&gt;
+  &lt;li&gt;모델 튜닝이 간소화 (범주형 변수를 자동으로 전처리 해주니깐 그 부분에 대해서 따로 튜닝을 할 필요x)&lt;/li&gt;
+  &lt;li&gt;R 그리고 Python과 연동&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4&gt;CatBoost의 장점 (추가)&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;CatBoost 개발자에 의하면 모델 튜닝 없이 default값으로만 좋은 성능을 보여준다고 합니다. 또한 튜닝을 통해서 얻을 수 있는 효과는 크지 않다고 합니다. &lt;a href=&quot;https://tech.yandex.com/catboost/doc/dg/concepts/parameter-tuning-docpage/#trees-number&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;CatBoost gives great results with default values of the training parameters. In most cases parameter tuning does not significantly affect the resulting quality of the model and therefore is unnecessary. However, CatBoost provides a very flexible interface for parameter tuning and can be configured to suit different tasks.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4&gt;성능비교 (RF vs GBM vs CatBoost)&lt;/h4&gt;
+&lt;p&gt;Tree기반의 대표적인 머신러닝 알고리즘에는 Random Forest(RF)와 Gradient Boosting Machine(GBM)이 존재합니다. 
+CatBoost가 RF와 GBM과 비교해서 속도 및 예측 성능의 차이를 비교하였습니다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;model&lt;/th&gt;
+      &lt;th&gt;time(sec)&lt;/th&gt;
+      &lt;th&gt;AUC&lt;/th&gt;
+      &lt;th&gt;Logloss&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;H2ORF in Python&lt;/td&gt;
+      &lt;td&gt;0.73&lt;/td&gt;
+      &lt;td&gt;0.9153&lt;/td&gt;
+      &lt;td&gt;0.3039&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;H2OGBM in Python&lt;/td&gt;
+      &lt;td&gt;0.49&lt;/td&gt;
+      &lt;td&gt;0.9118&lt;/td&gt;
+      &lt;td&gt;0.1954&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CatBoost in Python&lt;/td&gt;
+      &lt;td&gt;22.50&lt;/td&gt;
+      &lt;td&gt;0.9539&lt;/td&gt;
+      &lt;td&gt;0.1148&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;H2ORF in R&lt;/td&gt;
+      &lt;td&gt;1.57&lt;/td&gt;
+      &lt;td&gt;0.9170&lt;/td&gt;
+      &lt;td&gt;0.3607&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;H2OGBM in R&lt;/td&gt;
+      &lt;td&gt;1.69&lt;/td&gt;
+      &lt;td&gt;0.9160&lt;/td&gt;
+      &lt;td&gt;0.1931&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CatBoost in R&lt;/td&gt;
+      &lt;td&gt;29.73&lt;/td&gt;
+      &lt;td&gt;0.9259&lt;/td&gt;
+      &lt;td&gt;0.1565&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4&gt;CatBoost 설치 방법 및 전체 분석 코드&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/2econsulting/2econsulting.github.io/blob/master/_posts_w_code/CatBoostPy.py&quot;&gt;CatBoost in Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/2econsulting/2econsulting.github.io/blob/master/_posts_w_code/CatBoostR.R&quot;&gt;CatBoost in R&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 16 Jun 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/catboost/2018/06/16/catboostSimpleVersion.html</link>
+        <guid isPermaLink="true">http://localhost:4000/catboost/2018/06/16/catboostSimpleVersion.html</guid>
+        
+        <category>CatBoost</category>
+        
+        <category>R</category>
+        
+        <category>Python</category>
+        
+        
+        <category>CatBoost</category>
+        
+      </item>
+    
+      <item>
+        <title>추천 시스템 R패키지 비교 연구</title>
+        <description>&lt;p&gt;추천 R패키지 속도 및 성능 비교 연구 결과입니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;데이터셋 : MovieLense (100만행)&lt;/li&gt;
+  &lt;li&gt;컴퓨터 사양 : 7i, 32Gb RAM&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;패키지-목록&quot;&gt;패키지 목록&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;package name&lt;/th&gt;
+      &lt;th&gt;package description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Myrrix&lt;/td&gt;
+      &lt;td&gt;Real-Time, Scalable Clustering and Recommender System, Evolved from Apache Mahout&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;recommenderlab&lt;/td&gt;
+      &lt;td&gt;Lab for Developing and Testing Recommender Algorithms&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;recosystem&lt;/td&gt;
+      &lt;td&gt;Recommender System using Matrix Factorization&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;rrecsys&lt;/td&gt;
+      &lt;td&gt;Environment for Evaluating Recommender Systems&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;slimrec&lt;/td&gt;
+      &lt;td&gt;Sparse Linear Method to Predict Ratings and Top-N Recommendations&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;패키지-성능-비교&quot;&gt;패키지 성능 비교&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;package name&lt;/th&gt;
+      &lt;th&gt;algorithm&lt;/th&gt;
+      &lt;th&gt;time(min)&lt;/th&gt;
+      &lt;th&gt;RMSE&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;recommenderlab&lt;/td&gt;
+      &lt;td&gt;Most Popular&lt;/td&gt;
+      &lt;td&gt;4.27&lt;/td&gt;
+      &lt;td&gt;0.9725&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;User-Based CF&lt;/td&gt;
+      &lt;td&gt;5.03&lt;/td&gt;
+      &lt;td&gt;1.0464&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Item-based CF&lt;/td&gt;
+      &lt;td&gt;7.11&lt;/td&gt;
+      &lt;td&gt;1.5074&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;SVD&lt;/td&gt;
+      &lt;td&gt;5.52&lt;/td&gt;
+      &lt;td&gt;1.0204&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Funk SVD&lt;/td&gt;
+      &lt;td&gt;13.91&lt;/td&gt;
+      &lt;td&gt;0.9106&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Random&lt;/td&gt;
+      &lt;td&gt;3.49&lt;/td&gt;
+      &lt;td&gt;1.3832&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;ALS&lt;/td&gt;
+      &lt;td&gt;13.14&lt;/td&gt;
+      &lt;td&gt;0.9032&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;rrecsys&lt;/td&gt;
+      &lt;td&gt;itemAverage&lt;/td&gt;
+      &lt;td&gt;7.37&lt;/td&gt;
+      &lt;td&gt;0.9614&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;userAverage&lt;/td&gt;
+      &lt;td&gt;6.95&lt;/td&gt;
+      &lt;td&gt;1.0140&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;globalAverage&lt;/td&gt;
+      &lt;td&gt;6.22&lt;/td&gt;
+      &lt;td&gt;1.0913&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;IBKNN&lt;/td&gt;
+      &lt;td&gt;7.53&lt;/td&gt;
+      &lt;td&gt;1.0853&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;UBKNN&lt;/td&gt;
+      &lt;td&gt;37.49&lt;/td&gt;
+      &lt;td&gt;1.0196&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;FunkSVD&lt;/td&gt;
+      &lt;td&gt;31.36&lt;/td&gt;
+      &lt;td&gt;1.0811&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;SlopeOne&lt;/td&gt;
+      &lt;td&gt;15.48&lt;/td&gt;
+      &lt;td&gt;0.9028&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;recosystem&lt;/td&gt;
+      &lt;td&gt;Matrix Factorization&lt;/td&gt;
+      &lt;td&gt;0.68&lt;/td&gt;
+      &lt;td&gt;0.8529&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;slimrec&lt;/td&gt;
+      &lt;td&gt;Sparse Linear Method&lt;/td&gt;
+      &lt;td&gt;25.52&lt;/td&gt;
+      &lt;td&gt;2.2196&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SVDApproximation&lt;/td&gt;
+      &lt;td&gt;SVDApproximation&lt;/td&gt;
+      &lt;td&gt;4.92&lt;/td&gt;
+      &lt;td&gt;0.9313&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SmartCat-labs’s Git R code&lt;/td&gt;
+      &lt;td&gt;ibcf&lt;/td&gt;
+      &lt;td&gt;1.76&lt;/td&gt;
+      &lt;td&gt;0.8859&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;ubcf&lt;/td&gt;
+      &lt;td&gt;1.74&lt;/td&gt;
+      &lt;td&gt;0.8564&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;전체-분석-코드&quot;&gt;전체 분석 코드&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/2econsulting/2econsulting.github.io/blob/master/_posts_w_code/Comparison_Of_RecommendSystem.R&quot;&gt;Comparison of Recommend system packages in R&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 14 Jun 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/recommendersystem/2018/06/14/recommenderSystem.html</link>
+        <guid isPermaLink="true">http://localhost:4000/recommendersystem/2018/06/14/recommenderSystem.html</guid>
+        
+        <category>recommenderSystem</category>
+        
+        <category>R</category>
+        
+        
+        <category>recommenderSystem</category>
+        
+      </item>
+    
+  </channel>
+</rss>
