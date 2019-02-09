@@ -16,7 +16,7 @@ li {font-size: 15px;}
         <!-- Post List -->
         <div class="col-md-12">
 
-            <div style="margin-top: 3%">
+            <div style="margin-top: 12%">
         	<form action="/search.html" method="get">
 			  <label for="search-box"></label>
 			  <input type="text" id="search-box" name="query">
@@ -31,7 +31,7 @@ li {font-size: 15px;}
                     <h2 class="post-list-title">
                         <a class="hvr-underline-from-center" href="{{ site.url }}{{ post.url }}" style="line-height:normal;">{{ post.title }}</a>
                     </h2>
-                    <p class="post-list-description" style="overflow:hidden ;position:relative; line-height:1.3em; max-height:3.9em; text-align:justify; margin-right:-1em; padding-right:1em;">
+                    <p class="post-list-description" style="overflow:hidden ;position:relative; line-height:1.3em; max-height:1.5em; text-align:justify; margin-right:-1em; padding-right:1em;">
                         {{ post.excerpt | strip_html | strip }}
                     </p>
                     <p class="post-list-meta">
@@ -49,7 +49,5 @@ li {font-size: 15px;}
             {% include disqus-comments.html %}
 
         </div>
-
-    <!--</div>-->
 
 </section>
