@@ -18,11 +18,11 @@
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
 
-    <title>DB손해보험으로 이직</title>
+    <title>Data Science Newsletter</title>
     <meta name="description"
-          content="(냉무)">
+          content="">
 
-    <link rel="canonical" href="http://localhost:4000/etc/2019/01/07/DB.html">
+    <link rel="canonical" href="http://localhost:4000/bitcoin.html">
     <link rel="alternate" type="application/rss+xml" title="withmakers <br> 비트코인 & 부동산 데이터분석" href="http://localhost:4000/feed.xml">
 
     <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
@@ -39,10 +39,14 @@
 
     <!-- CSS set in page -->
     
+    <link rel="stylesheet" href="/assets/css/index.css">
+    
+    <link rel="stylesheet" href="/assets/css/about.css">
+    
 
     <!-- CSS set in layout -->
     
-    <link rel="stylesheet" href="/assets/css/sidebar-post-nav.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
     
 
     <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -158,20 +162,19 @@
 
 
         <div class="content">
-            <!-- 글쓰는데 사용되는 HTML -->
-<section class="jumbotron geopattern" data-pattern-id="DB손해보험으로 이직">
+            <!-- Blog페이지 수정하는 HTML -->
+<section class="jumbotron" style="background-image: url(https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/_img/blue.png);background-repeat: no-repeat; background-size: 100% 100%;">
     <div class="container">
         <div id="jumbotron-meta-info">
-            <h1>DB손해보험으로 이직</h1>
+            <h1>Data Science Newsletter</h1>
             <span class="meta-info">
                 
-                
-                <span class="octicon octicon-calendar"></span> 2019/01/07
                 
             </span>
         </div>
     </div>
 </section>
+
 <script>
     $(document).ready(function(){
 
@@ -181,48 +184,60 @@
 
     });
 </script>
-<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
-	<script type="text/javascript" async
-		src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-	</script>
-    <div class="row">
 
-        
-        <div class="col-md-12 markdown-body">
+<article class="post container">
 
-            <p>(냉무)</p>
+    <script> 
+$(function(){ 
+	includeLayout(); 
+}); 
 
-
-            <!-- Comments -->
-            <!-- 
- -->
-            <div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://jacobgreen1984.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+function includeLayout(){ 
+	var includeArea = $('[data-include]'); 
+	var self, url; 
+	$.each(includeArea, function() { 
+		self = $(this); 
+		url = self.data("include"); 
+		self.load(url, function() { 
+			self.removeAttr("data-include"); 
+		}); 
+	}); 
+} 
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
 
-        </div>
-        
-        -->
+<div class="col-md-8">	
 
-    </div>
+	<!--<div><img src="https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/input/png/wordcloud_20180711.png"></div>-->
+	<script> document.write(new Date().toLocaleDateString());</script> 데이터 사이언스 뉴스레터 
+	<a href="https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/input/png/wordcloud.png">(wordcloud)</a>
+
+	<br />
+
+	<br />
+
+	<h4>Kaggle Blog NEWS TITLE</h4>
+	<div data-include="https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/input/html/kaggle_out.html" style="margin-left:20px;"></div>
+
+	<br />
+
+	<h4>Data Camp NEWS TITLE</h4>
+	<div data-include="https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/input/html/datacamp_out.html" style="margin-left:20px;"></div>
+
+	<br />
+
+	<h4>Analytics Vidhya NEWS TITLE</h4>
+	<div data-include="https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/input/html/vidhya_out.html" style="margin-left:20px;"></div>
+
+	<br />
+
+	<h4>Machine Learning Mastery NEWS TITLE</h4>
+	<div data-include="https://raw.githubusercontent.com/2econsulting/2econsulting.github.io/master/data/newsletter/input/html/mastery_out.html" style="margin-left:20px;"></div>
+
+</div>
+
+<p><br /></p>
+
+
 
 </article>
 

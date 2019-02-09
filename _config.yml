@@ -56,7 +56,7 @@ kramdown:
 # disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
 
 # Pagination
-paginate: 5
+paginate: 3
 paginate_path: 'page:num'
 
 # collections
@@ -70,16 +70,12 @@ navs:
     label: Home
 
   -
-    label: Project
-    submenu1:
-      - href: /open-source
-        label: Open Source
-      - href: /newsletter
-        label: News Letter
-      - href: /blog
-        label: Research Title
-      - href: /master-code
-        label: Machine Learning Master Code        
+    href: /mlrealestate
+    label: 부동산
+
+  -
+    href: /mlbitcoin
+    label: 비트코인
 
 #  -
 #    label: Schedule

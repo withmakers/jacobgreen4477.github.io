@@ -9,60 +9,15 @@ ul.a {list-style-type: circle;}
 li {font-size: 15px;}
 </style>
 
-<section class="jumbotron" style="background-image: url(https://raw.githubusercontent.com/jacobgreen4477/jacobgreen4477.github.io/master/_img/wave_v1.png);background-repeat: no-repeat; background-size: 100% 100%;">
-<!--<section class="jumbotron">-->   
-    <div class="container">
-        <h1>{{ site.title }}</h1>
-        <div id="jumbotron-meta-info">
-            <span class="meta-info hvr-grow">
-                <span class="octicon octicon-organization"></span>
-                <a href="{{ site.company_url }}" target="_blank">{{ site.company }}</a>
-            </span> 
-            <span class="meta-info hvr-grow">
-                <span class="octicon octicon-mark-github"></span>
-                <a href="{{ site.github_url }}" target="_blank">깃허브</a>
-            </span> 
 
-            <!--
-            <span class="meta-info hvr-grow">
-                <span class="octicon octicon-plus"></span>
-                <a href="https://2econsulting.github.io/subscribe" target="_blank">구독</a>
-            </span>
-
-            <span class="meta-info hvr-grow">
-                <span class="octicon octicon-mail"></span>
-                <a href="https://flaskapp2e.herokuapp.com" target="_blank">PFMS</a>
-            </span>
-            <span class="meta-info hvr-grow">
-                <span class="octicon octicon-graph"></span>
-                <a href="https://2econsulting.github.io/request/request" target="_blank">분석request</a>
-            </span>
-            -->
-        </div>
-    </div>
-</section>
-
-<!--<section class="content container">-->
+<section class="content container">
 
     <div class="row">
 
-        <div class="col-md-3 text-center">
-        <h4 class="sidebar-title">[[ 데이터 사이언스 뉴스레터 ]]</h4>
-        <br>
-        {% assign sorted-newsletters = site.categories.newsletters | sort: 'title' | reverse %}
-        {% for newsletter in sorted-newsletters %}
-        <ul class="a">
-          <li><a href="{{ site.url }}{{ newsletter.url }}">{{ newsletter.title }}</a></li>
-        </ul>
-        {% endfor %}
-        </div>
-
-        <br>
-
         <!-- Post List -->
-        <div class="col-md-6">
+        <div class="col-md-12">
 
-            <div style="margin-top: -1%">
+            <div style="margin-top: 3%">
         	<form action="/search.html" method="get">
 			  <label for="search-box"></label>
 			  <input type="text" id="search-box" name="query">
@@ -91,31 +46,10 @@ li {font-size: 15px;}
             <!-- Pagination -->
             {% include pagination.html %}
 
-            <!-- Pagination links -->
-            <!--
-            <div class="pagination">
-              {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-              {% else %}
-            <span class="previous">Previous</span>
-              {% endif %}
-              <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-              {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-              {% else %}
-            <span class="next ">Next</span>
-              {% endif %}
-            </div>
-            -->
-
             <!-- Comments -->
             {% include disqus-comments.html %}
 
         </div>
-
-        <div class="col-md-2" style="left:5%">
-            {% include sidebar-popular-repo.html %}
-        </div>  
 
     <!--</div>-->
 
