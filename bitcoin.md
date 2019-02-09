@@ -1,6 +1,6 @@
 ---
-layout: page_newsletter
-title: Data Science Newsletter
+layout: page_bitcoin
+title: 비트코인 가격 예측 
 menu: bitcoin
 css: ['index.css','about.css']
 ---
