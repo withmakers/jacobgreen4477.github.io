@@ -10,7 +10,6 @@ title: withmakers 비트코인 & 부동산 데이터분석 # ex. I m Chuan
 name: DB손해보험 DS랩 # ex. DONGChuan
 email: jacobgreen4477@gmail.com
 company: DB손해보험
-company_url: https://www.idbins.com/Index.jsp
 github_url: https://github.com/withmakers # ex. https://github.com/DONGChuan
 github_username: withmakers # ex. DONGChuan
 favicon: favicon.ico # Image must be in assets/images
@@ -19,7 +18,7 @@ repository: withmakers/withmakers.github.io # ex. DONGChuan/DONGChuan.github.io
 # The base hostname & protocol for your site
 # For local test, please use http://localhost:4000
 # For production, use your github page url. ex. http://dongchuan.github.io
-url: https://withmakers.github.io/welcome
+url: https://withmakers.github.io
 
 # encoding type
 encoding: UTF-8
@@ -91,7 +90,5 @@ side_bar_repo_limit: 7 # Number of repos to show
 
 # comment by disqus-shortname
 disqus-shortname: jacobgreen4477
-
-
 
 theme: jekyll-theme-modernist
