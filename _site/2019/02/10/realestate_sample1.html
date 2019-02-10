@@ -18,11 +18,11 @@
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
 
-    <title>DB손해보험으로 이직</title>
+    <title>서울/수도권에서 가장 집값이 비싼 동네</title>
     <meta name="description"
-          content="(냉무)">
+          content="import pandas as pdpd.DataFrame({'tmp':[1,2,3]})">
 
-    <link rel="canonical" href="http://localhost:4000/etc/2019/01/07/DB.html">
+    <link rel="canonical" href="http://localhost:4000/2019/02/10/realestate_sample1.html">
     <link rel="alternate" type="application/rss+xml" title="withmakers 비트코인 & 부동산 데이터분석" href="http://localhost:4000/feed.xml">
 
     <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
@@ -38,6 +38,10 @@
     <link rel="stylesheet" href="/assets/css/common.css">
 
     <!-- CSS set in page -->
+    
+    <link rel="stylesheet" href="/assets/css/index.css">
+    
+    <link rel="stylesheet" href="/assets/css/about.css">
     
 
     <!-- CSS set in layout -->
@@ -141,14 +145,14 @@
 
         <div class="content">
             <!-- 글쓰는데 사용되는 HTML -->
-<section class="jumbotron geopattern" data-pattern-id="DB손해보험으로 이직">
+<section class="jumbotron geopattern" data-pattern-id="서울/수도권에서 가장 집값이 비싼 동네">
     <div class="container">
         <div id="jumbotron-meta-info">
-            <h1>DB손해보험으로 이직</h1>
+            <h1>서울/수도권에서 가장 집값이 비싼 동네</h1>
             <span class="meta-info">
                 
                 
-                <span class="octicon octicon-calendar"></span> 2019/01/07
+                <span class="octicon octicon-calendar"></span> 2019/02/10
                 
             </span>
         </div>
@@ -170,9 +174,52 @@
     <div class="row">
 
         
-        <div class="col-md-12 markdown-body">
+        <div class="col-md-8 markdown-body">
 
-            <p>(냉무)</p>
+            <pre><code class="language-python">import pandas as pd
+pd.DataFrame({'tmp':[1,2,3]})
+</code></pre>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tmp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="language-python">
+</code></pre>
 
 
             <!-- Comments -->
@@ -199,7 +246,73 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                             
+        </div>
 
+        <!--
+        <div class="col-md-4">
+            <h3>Post Directory</h3>
+<div id="post-directory-module">
+<section class="post-directory">
+    <!-- Links that trigger the jumping -->
+    <!-- Added by javascript below -->
+    <dl></dl>
+</section>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $( "article h2" ).each(function( index ) {
+            $(".post-directory dl").append("<dt><a class=\"jumper\" hre=#" +
+                    $(this).attr("id")
+                    + ">"
+                    + $(this).text()
+                    + "</a></dt>");
+
+            var children = $(this).nextUntil("h2", "h3")
+
+            children.each(function( index ) {
+                $(".post-directory dl").append("<dd><a class=\"jumper\" hre=#" +
+                        $(this).attr("id")
+                        + ">"
+                        + "&nbsp;&nbsp;- " + $(this).text()
+                        + "</a></dd>");
+            });
+        });
+
+        var fixmeTop = $('#post-directory-module').offset().top - 100;       // get initial position of the element
+
+        $(window).scroll(function() {                  // assign scroll event listener
+
+            var currentScroll = $(window).scrollTop(); // get current position
+
+            if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+                $('#post-directory-module').css({      // scroll to that element or below it
+                    top: '100px',
+                    position: 'fixed',
+                    width: 'inherit'
+                });
+            } else {                                   // apply position: static
+                $('#post-directory-module').css({      // if you scroll above it
+                    position: 'inherit',
+                    width: 'inherit'
+                });
+            }
+
+        });
+
+        $("a.jumper").on("click", function( e ) {
+
+            e.preventDefault();
+
+            $("body, html").animate({
+                scrollTop: ($( $(this).attr('hre') ).offset().top - 100)
+            }, 600);
+
+        });
+    });
+
+</script>
         </div>
         
         -->

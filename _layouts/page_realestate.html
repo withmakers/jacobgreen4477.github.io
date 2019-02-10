@@ -1,6 +1,6 @@
 ---
 layout: default
-css: ['index.css']
+css: ['index.css','sidebar-post-nav.css']
 ---
 <!-- Blog페이지 수정하는 HTML -->
 <section class="jumbotron" style="background-image: url(https://raw.githubusercontent.com/withmakers/withmakers.github.io/master/_img/realestate.jpg);background-repeat: no-repeat; background-size: 100% 120%;">
@@ -29,8 +29,23 @@ css: ['index.css']
     });
 </script>
 
-<article class="post container">
+<!-- 글쓰는데 사용되는 HTML -->
+<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
+    <script type="text/javascript" async
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <div class="row">
 
-    {{ content }}
+        <div class="col-md-12 markdown-body">
+
+            {{ content }}
+
+            <!-- Comments -->
+            <!-- {% include disqus-comments.html %} -->
+            {% if site.disqus-shortname %}{% include disqus.html %}{% endif %}
+
+        </div>
+
+    </div>
 
 </article>

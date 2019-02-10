@@ -1,0 +1,42 @@
+---
+layout: default
+css: ['sidebar-post-nav.css']
+---
+<!-- 글쓰는데 사용되는 HTML -->
+{% include jumbotron.html %}
+<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
+	<script type="text/javascript" async
+		src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+    <div class="row">
+
+        {% if page.no-post-nav %}
+        <div class="col-md-12 markdown-body">
+
+            {{ content }}
+
+            <!-- Comments -->
+            <!-- {% include disqus-comments.html %} -->
+            {% if site.disqus-shortname %}{% include disqus.html %}{% endif %}
+
+        </div>
+        {% else %}
+        <div class="col-md-8 markdown-body">
+
+            {{ content }}
+
+            <!-- Comments -->
+            <!-- {% include disqus-comments.html %} -->
+            {% if site.disqus-shortname %}{% include disqus.html %}{% endif %}
+        </div>
+
+        <!--
+        <div class="col-md-4">
+            {% include sidebar-post-nav.html %}
+        </div>
+        {% endif %}
+        -->
+
+    </div>
+
+</article>
