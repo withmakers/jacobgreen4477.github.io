@@ -32,19 +32,19 @@ window.addEventListener('load',function() {
 .tg .tg-yq6s{background-color:#FCFBE3;text-align:center;vertical-align:top}
 </style>
 
+<script src="https://widgets.coingecko.com/coingecko-coin-price-static-headline-widget.js"></script>
+
 <div class="col-md-12">	
 
-	&nbsp; <span class="octicon octicon-graph"></span> &nbsp; Bitcoin Core (BTC) 가격 차트 <br>
+	<!--
+	&nbsp; <span class="octicon octicon-ruby"></span> &nbsp; Bitcoin Core (BTC) 가격 차트 <br>
 	<div class="btcwdgt-chart"></div>
+	-->
 
-	<br>
+	<div class="wrapper" style="margin-left:0%">
 
-	&nbsp; <span class="octicon octicon-graph"></span> &nbsp; D(<script> document.write(new Date().toLocaleDateString());</script>)+1 비트코인 예측모델 YHAT 
-
-	<div class="wrapper">
-
-	  <div class="box">
-	    <div class="content">
+	  <div class="box" style="margin-left:0%">
+	    <div class="content" style="margin-left:0%">
 	    상승/유지/하락 예측모델 <br>
 	    <h4 style="color:white;">상승(98%)</h4> <br>	
 		</div>
@@ -73,11 +73,17 @@ window.addEventListener('load',function() {
 
 	</div>
 
+    <br>
+
+	<span><script> document.write(new Date().toLocaleDateString());</script> &nbsp; 실시간 코인 가격</span>
+
+	<coingecko-coin-price-static-headline-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" locale="ko"></coingecko-coin-price-static-headline-widget>
+
 	<br>
 
-	&nbsp; <span class="octicon octicon-graph"></span> &nbsp; 비트코인 예측모델 EVAL
+	비트코인 예측모델 EVAL
 
-	<table class="tg" style="margin-left: 10px;">
+	<table class="tg">
 	  <tr>
 	    <th class="tg-baqh">title</th>
 	    <th class="tg-baqh">value</th>
@@ -121,6 +127,8 @@ window.addEventListener('load',function() {
 	    <td class="tg-yq6s">-</td>
 	  </tr>
 	</table>
+
+	<br>
 
 	<hr>
 
