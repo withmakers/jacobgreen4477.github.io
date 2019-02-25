@@ -1,4 +1,5 @@
 ---
+layout: none
 title: (대시보드) TERA펀딩 부동산 데이터분석 v1.0.1
 ---
 
