@@ -215,7 +215,7 @@
                   "title": "2019년 3월 비트코인 가격 예측 (검증)",
                   "author": "",
                   "category": "",
-                  "content": "&lt;!DOCTYPE html&gt;2019년 3월 비트코인 가격 예측 (검증)2019년 3월 비트코인 가격 예측 (검증)예측 기간 : 2월 22일 ~ 3월 20일# librarylibrary(data.table)library(plotly)# read data data_w_yhat = fread(&quot;C:/Users/user/Documents/BITCOIN/output/backtest_20190222.csv&quot;)data_w_y = fread(&quot;C:/Users/user/Documents/BITCOIN/output/realdata_20190320.csv&quot;)# date data_w_yhat[,ymd:=as.numeric(gsub(&quot;-&quot;,&quot;&quot;,substr(V1,1,10)))]data_w_yhat[,time:=gsub(&quot; &quot;,&quot;&quot;,substr(V1,11,19))]data_w_yhat = data_w_yhat[time==&quot;22:00:00&quot;,]data_w_y[,ymd:=as.numeric(gsub(&quot;-&quot;,&quot;&quot;,substr(date,1,10)))]data_w_y[,time:=gsub(&quot; &quot;,&quot;&quot;,substr(date,11,19))]data_w_y = data_w_y[time==&quot;22:00:00&quot;,]# cut rangedata_w_yhat = data_w_yhat[ymd&gt;=20190222 &amp; ymd&lt;20190320,list(date=V1,Yhat=daily_avg)]data_w_y = data_w_y[ymd&gt;=20190222 &amp; ymd&lt;20190320,list(date,Y=close)]# mergedata = merge(data_w_y,data_w_yhat,by=&quot;date&quot;,all.y=T)data[,date:=substr(date,1,10)]# plotplot_ly(data, x = ~date) %&gt;%  add_trace(y = ~Y, type = 'scatter', mode = 'lines', line = list(color = 'blue', width = 1), name=&quot;실제값&quot;) %&gt;%  add_trace(y = ~Yhat, type = 'scatter', mode = 'lines', line = list(color = 'red', width = 1, dash='dot'), name=&quot;예측값&quot;) %&gt;%   layout(xaxis=list(fixedrange=F, title=&quot;date&quot;),yaxis=list(fixedrange=F, title=&quot;price&quot;),autosize = F, width = 900) %&gt;%   config(displayModeBar = F)",
+                  "content": "&lt;!DOCTYPE html&gt;2019년 3월 비트코인 가격 예측 (검증)2019년 3월 비트코인 가격 예측 (검증)예측 기간 : 2월 22일 ~ 3월 20일# librarylibrary(data.table)library(plotly)# read data data_w_yhat = fread(&quot;C:/Users/user/Documents/BITCOIN/output/backtest_20190222.csv&quot;)data_w_y = fread(&quot;C:/Users/user/Documents/BITCOIN/output/realdata_20190320.csv&quot;)# date data_w_yhat[,ymd:=as.numeric(gsub(&quot;-&quot;,&quot;&quot;,substr(V1,1,10)))]data_w_yhat[,time:=gsub(&quot; &quot;,&quot;&quot;,substr(V1,11,19))]data_w_yhat = data_w_yhat[time==&quot;22:00&quot;,]data_w_y[,ymd:=as.numeric(gsub(&quot;-&quot;,&quot;&quot;,substr(date,1,10)))]data_w_y[,time:=gsub(&quot; &quot;,&quot;&quot;,substr(date,11,19))]data_w_y = data_w_y[time==&quot;22:00:00&quot;,]# cut rangedata_w_yhat = data_w_yhat[ymd&gt;=20190222 &amp; ymd&lt;20190320,list(date=ymd,Yhat=daily_avg)]data_w_y = data_w_y[ymd&gt;=20190222 &amp; ymd&lt;20190320,list(date=ymd,Y=close)]# mergedata = merge(data_w_y,data_w_yhat,by=&quot;date&quot;,all.y=T)data[,date:=substr(date,1,10)]# plotplot_ly(data, x = ~date) %&gt;%  add_trace(y = ~Y, type = 'scatter', mode = 'lines', line = list(color = 'blue', width = 1), name=&quot;실제값&quot;) %&gt;%  add_trace(y = ~Yhat, type = 'scatter', mode = 'lines', line = list(color = 'red', width = 1, dash='dot'), name=&quot;예측값&quot;) %&gt;%   layout(xaxis=list(fixedrange=T, title=&quot;date&quot;),yaxis=list(fixedrange=T, title=&quot;price&quot;),autosize = F, width = 900) %&gt;%   config(displayModeBar = F)",
                   "url": "/2019/03/20/bitcoin-prediction-v101.html"
                 }
                 ,
@@ -506,9 +506,9 @@
                 <span data-toggle="tooltip" class="meta-info" title="0 forks">
                     <span class="octicon octicon-git-branch"></span> 0
                 </span>
-                <span data-toggle="tooltip" class="meta-info" title="Last updated：2019-03-20 13:54:46 UTC">
+                <span data-toggle="tooltip" class="meta-info" title="Last updated：2019-03-20 14:46:43 UTC">
                     <span class="octicon octicon-clock"></span>
-                    <time datetime="2019-03-20 13:54:46 UTC" title="2019-03-20 13:54:46 UTC">2019-03-20</time>
+                    <time datetime="2019-03-20 14:46:43 UTC" title="2019-03-20 14:46:43 UTC">2019-03-20</time>
                 </span>
             </div>
         </div>
