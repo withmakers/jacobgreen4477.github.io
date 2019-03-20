@@ -1,6 +1,6 @@
 ---
 layout: post_bitcoin
-title: H2O Cox Proportional Hazards Model 리뷰 
+title: 2019년 3월 비트코인 가격 예측 (검증)
 css: ['index.css','about.css']  
 ---
 
