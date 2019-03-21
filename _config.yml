@@ -55,7 +55,7 @@ kramdown:
 # disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
 
 # Pagination
-paginate: 6
+paginate: 5
 paginate_path: 'page:num'
 
 # collections
