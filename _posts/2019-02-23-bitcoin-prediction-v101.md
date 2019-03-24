@@ -10,4 +10,4 @@ css: ['index.css','about.css']
 
 <br>
 
-{% include bitcoin/2019-02-23-bitcoin-prediction-v101-plot.html %}
+{% include bitcoin/2019-02-23-bitcoin-prediction-v101.html %}
