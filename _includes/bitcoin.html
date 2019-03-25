@@ -34,153 +34,27 @@ window.addEventListener('load',function() {
 
 <script src="https://widgets.coingecko.com/coingecko-coin-price-static-headline-widget.js"></script>
 
-<div class="col-md-12">	
-
-	<!--
-	&nbsp; <span class="octicon octicon-ruby"></span> &nbsp; Bitcoin Core (BTC) 가격 차트 <br>
-	<div class="btcwdgt-chart"></div>
-	-->
-
-	<!--
-	<div class="wrapper" style="margin-left:0%">
-
-	  <div class="box" style="margin-left:0%">
-	    <div class="content" style="margin-left:0%">
-	    상승/유지/하락 예측모델 <br>
-	    <h4 style="color:white;">상승(98%)</h4> <br>	
-		</div>
-	  </div>
-	  
-	   <div class="box">
-	    <div class="content">
-	    가격 예측모델 <br>
-	    <h4 style="color:white">4,020,000원</h4> <br>
-		</div>
-	  </div>
-
-	  <div class="box">
-	    <div class="content">
-	    투자금액 추천모델 <br>
-	    <h4 style="color:white">투자금의 10%</h4> <br>
-		</div>
-	  </div>
-
-	  <div class="box">
-	    <div class="content">
-	    손절매 예측모델 <br>
-	    <h4 style="color:white">코인 유지</h4> <br>
-		</div>
-	  </div>
-
-	</div>
-
-    <br>
-
-	<span><script> document.write(new Date().toLocaleDateString());</script> &nbsp; 실시간 코인 가격</span>
-
-	<coingecko-coin-price-static-headline-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" locale="ko"></coingecko-coin-price-static-headline-widget>
-
-	<br>
-
-	비트코인 예측모델 EVAL
-
-	<table class="tg">
-	  <tr>
-	    <th class="tg-baqh">title</th>
-	    <th class="tg-baqh">value</th>
-	    <th class="tg-baqh">trading days</th>
-	    <th class="tg-baqh">hit days</th>
-	  </tr>
-	  <tr>
-	    <td class="tg-baqh">최초 투자일</td>
-	    <td class="tg-yq6s">2019-00-00</td>
-	    <td class="tg-baqh">-</td>
-	    <td class="tg-yq6s">-</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-baqh">초기 자본금</td>
-	    <td class="tg-yq6s">10,000,000</td>
-	    <td class="tg-baqh">-</td>
-	    <td class="tg-yq6s">-</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-baqh">누적 수익률</td>
-	    <td class="tg-yq6s">10%</td>
-	    <td class="tg-baqh">-</td>
-	    <td class="tg-yq6s">-</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-baqh">상승/유지/하락 예측모델 HR</td>
-	    <td class="tg-yq6s">80%</td>
-	    <td class="tg-baqh">100 days</td>
-	    <td class="tg-yq6s">80 days</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-baqh">가격 예측모델 MAPE</td>
-	    <td class="tg-yq6s">-</td>
-	    <td class="tg-baqh">-</td>
-	    <td class="tg-yq6s">-</td>
-	  </tr>
-	  <tr>
-	    <td class="tg-baqh">손절매 예측모델 HR</td>
-	    <td class="tg-yq6s">-</td>
-	    <td class="tg-baqh">-</td>
-	    <td class="tg-yq6s">-</td>
-	  </tr>
-	</table>
-
-	<br>
-
-	<hr>
-	-->
+<div class="col-md-12">
 
 	<br>
 
 	1. 프로젝트 소개 <br>  
-	2. 데이터 수집 (데이터 수집 경로를 댓글로 달아주세요)<br>
-	3. 데이터 탐색 <br>
-	4. 학습 <br>
-	5. 검증 <br>
-	6. 운영 <br>
+	2. 데이터 수집 <br>
 
 	<br>
 
 	<h4>1. 프로젝트 소개</h4>
 
-    >> 예측 모델 목적 <br>
-	1. 머신러닝/딥러닝을 활용하여 미래시점의 비트코인의 가격 또는 등락을 예측한다. (가격 예측) <br>
-    2. 매도/매수 금액도 같이 예측한다. (포트폴리오 최적화) <br>
-    3. 손절매 예측 모델을 같이 운영한다. (리스트 헤지) <br>
-
-    <br>
-	
-	>> 모델 상세 <br> 
-	미래시점 비트코인 가격 예측 <br>
-	미래시점 비트코인 가격 예측 (상승기 시장) <br>
-	미래시점 비트코인 가격 예측 (하락기 시장) <br>
-	미래시점 비트코인 가격 상승/하락 예측 <br>
-	미래시점 비트코인 가격 상승/유지/하락 예측 <br> 
-	매도/매수 금액 최적화 <br>
-	손절매 예측 모델 <br>
-	이벤트 예측 모델 <br>
-	... <br>
-
-    <br>
-
-	>> 알고리즘 : Light GBM, XGBoost, CatBoost, LSTM, MV <br>
-
-    <br> 
-
-	>> 프로그램 : Python/R <br>
+	타겟 : 비트코인, 이더리움, 비트토렌트, 엔비디아 등 <br>
+	코인 또는 주식 m+30일 예측모델 개발 <br>
+	현재 시점으로 부터 한달 뒤(m+30일) 가격을 예측해서 매수/매도 시점 파악 <br>
+	모델 구조 : m+1일 ~ m+7일 모델 개발하여 m+30일 모델과 결합 함 <br>
 
 	<br>
 
 	<h4>2. 데이터 수집</h4>
 
-	<li>www.google.com</li>
-	<li>www.google.com</li>
-	<li>www.google.com</li>
-	<li>www.google.com</li>
+	<a href="https://cran.r-project.org/web/packages/crypto/index.html">crypto API</a> <br>
 
 	<br>
 
@@ -189,3 +63,100 @@ window.addEventListener('load',function() {
 <br>
 
 
+<!--
+&nbsp; <span class="octicon octicon-ruby"></span> &nbsp; Bitcoin Core (BTC) 가격 차트 <br>
+<div class="btcwdgt-chart"></div>
+-->
+
+<!--
+<div class="wrapper" style="margin-left:0%">
+
+  <div class="box" style="margin-left:0%">
+    <div class="content" style="margin-left:0%">
+    상승/유지/하락 예측모델 <br>
+    <h4 style="color:white;">상승(98%)</h4> <br>	
+	</div>
+  </div>
+  
+   <div class="box">
+    <div class="content">
+    가격 예측모델 <br>
+    <h4 style="color:white">4,020,000원</h4> <br>
+	</div>
+  </div>
+
+  <div class="box">
+    <div class="content">
+    투자금액 추천모델 <br>
+    <h4 style="color:white">투자금의 10%</h4> <br>
+	</div>
+  </div>
+
+  <div class="box">
+    <div class="content">
+    손절매 예측모델 <br>
+    <h4 style="color:white">코인 유지</h4> <br>
+	</div>
+  </div>
+
+</div>
+
+<br>
+
+<span><script> document.write(new Date().toLocaleDateString());</script> &nbsp; 실시간 코인 가격</span>
+
+<coingecko-coin-price-static-headline-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" locale="ko"></coingecko-coin-price-static-headline-widget>
+
+<br>
+
+비트코인 예측모델 EVAL
+
+<table class="tg">
+  <tr>
+    <th class="tg-baqh">title</th>
+    <th class="tg-baqh">value</th>
+    <th class="tg-baqh">trading days</th>
+    <th class="tg-baqh">hit days</th>
+  </tr>
+  <tr>
+    <td class="tg-baqh">최초 투자일</td>
+    <td class="tg-yq6s">2019-00-00</td>
+    <td class="tg-baqh">-</td>
+    <td class="tg-yq6s">-</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">초기 자본금</td>
+    <td class="tg-yq6s">10,000,000</td>
+    <td class="tg-baqh">-</td>
+    <td class="tg-yq6s">-</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">누적 수익률</td>
+    <td class="tg-yq6s">10%</td>
+    <td class="tg-baqh">-</td>
+    <td class="tg-yq6s">-</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">상승/유지/하락 예측모델 HR</td>
+    <td class="tg-yq6s">80%</td>
+    <td class="tg-baqh">100 days</td>
+    <td class="tg-yq6s">80 days</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">가격 예측모델 MAPE</td>
+    <td class="tg-yq6s">-</td>
+    <td class="tg-baqh">-</td>
+    <td class="tg-yq6s">-</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">손절매 예측모델 HR</td>
+    <td class="tg-yq6s">-</td>
+    <td class="tg-baqh">-</td>
+    <td class="tg-yq6s">-</td>
+  </tr>
+</table>
+
+<br>
+
+<hr>
+-->
