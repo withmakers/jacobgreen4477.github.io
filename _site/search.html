@@ -211,6 +211,15 @@
           <script>
             window.store = {
               
+                "2019-04-04-coin-summary-html": {
+                  "title": "2019년 4월 만우절 코인가격 변동 차트",
+                  "author": "",
+                  "category": "",
+                  "content": "&lt;!DOCTYPE html&gt;2019년 4월 만우절 코인가격 변동 차트2019년 4월 만우절 코인가격 변동 차트# optionsoptions(scipen = 999)&quot;%ni%&quot; = Negate(&quot;%in%&quot;)# librarylibrary(cryptor)library(data.table)library(plotly)library(lubridate)library(h2o)range01 &lt;- function(x){(x-min(x))/(max(x)-min(x))}# predict_dayspredict_days = 8# BTC_INCtmp = get_historical_price(fsym=&quot;BTC&quot;, tsym=&quot;KRW&quot;, end_time=Sys.Date(), unit='hour',limit=1000)tmp = as.data.table(tmp)tmp = tmp[time&gt;'2019-03-31',]BTC_INC = tmpBTC_INC = BTC_INC[,list(time,BTC=range01(close)*100)]# BCH_INCtmp = get_historical_price(fsym=&quot;BCH&quot;, tsym=&quot;KRW&quot;, end_time=Sys.Date(), unit='hour',limit=1000)tmp = as.data.table(tmp)tmp = tmp[time&gt;'2019-03-31',]BCH_INC = tmpBCH_INC = BCH_INC[,list(time,BCH=range01(close)*100)]# ETH_INCtmp = get_historical_price(fsym=&quot;ETH&quot;, tsym=&quot;KRW&quot;, end_time=Sys.Date(), unit='hour',limit=1000)tmp = as.data.table(tmp)tmp = tmp[time&gt;'2019-03-31',]ETH_INC = tmpETH_INC = ETH_INC[,list(time,ETH=range01(close)*100)]# XRP_INCtmp = get_historical_price(fsym=&quot;XRP&quot;, tsym=&quot;KRW&quot;, end_time=Sys.Date(), unit='hour',limit=1000)tmp = as.data.table(tmp)tmp = tmp[time&gt;'2019-03-31',]XRP_INC = tmpXRP_INC = XRP_INC[,list(time,XRP=range01(close)*100)]# REP_INCtmp = get_historical_price(fsym=&quot;REP&quot;, tsym=&quot;KRW&quot;, end_time=Sys.Date(), unit='hour',limit=1000)tmp = as.data.table(tmp)tmp = tmp[time&gt;'2019-03-31',]REP_INC = tmpREP_INC = REP_INC[,list(time,REP=range01(close)*100)]# plotplot_ly() %&gt;%  add_trace(data=BTC_INC, x=~time, y=~BTC, type = 'scatter',  mode = 'lines+markers', line = list(width = 1), name=&quot;비트코인&quot;) %&gt;%  add_trace(data=BCH_INC, x=~time, y=~BCH, type = 'scatter',  mode = 'lines+markers', line = list(width = 1), name=&quot;비트코인캐시&quot;) %&gt;%  add_trace(data=ETH_INC, x=~time, y=~ETH, type = 'scatter',  mode = 'lines+markers', line = list(width = 1), name=&quot;이더리움&quot;) %&gt;%  add_trace(data=XRP_INC, x=~time, y=~XRP, type = 'scatter',  mode = 'lines+markers', line = list(width = 1), name=&quot;리플&quot;) %&gt;%  add_trace(data=REP_INC, x=~time, y=~REP, type = 'scatter',  mode = 'lines+markers', line = list(width = 1), name=&quot;어거&quot;) %&gt;%   layout(xaxis=list(fixedrange=T, title=&quot;date&quot;),yaxis=list(fixedrange=T, title=&quot;price&quot;),autosize = F, width = 900) %&gt;%   config(displayModeBar = F)## Warning: Specifying width/height in layout() is now deprecated.## Please specify in ggplotly() or plot_ly()",
+                  "url": "/2019/04/04/coin-summary.html"
+                }
+                ,
+              
                 "2019-03-26-bitcoin-prediction-v202-html": {
                   "title": "2019년 4월 비트코인 가격 예측 (블랜딩)",
                   "author": "",
@@ -515,9 +524,9 @@
                 <span data-toggle="tooltip" class="meta-info" title="0 forks">
                     <span class="octicon octicon-git-branch"></span> 0
                 </span>
-                <span data-toggle="tooltip" class="meta-info" title="Last updated：2019-03-25 15:53:06 UTC">
+                <span data-toggle="tooltip" class="meta-info" title="Last updated：2019-03-25 22:05:52 UTC">
                     <span class="octicon octicon-clock"></span>
-                    <time datetime="2019-03-25 15:53:06 UTC" title="2019-03-25 15:53:06 UTC">2019-03-25</time>
+                    <time datetime="2019-03-25 22:05:52 UTC" title="2019-03-25 22:05:52 UTC">2019-03-25</time>
                 </span>
             </div>
         </div>
