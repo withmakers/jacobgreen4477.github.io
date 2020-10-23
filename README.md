@@ -1,2 +1,1 @@
-# withmakers 비트코인 & 부동산 
-
+# jacob's ML 다이어리
